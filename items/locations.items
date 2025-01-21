@@ -1,0 +1,32 @@
+Group AU                                                                                        ["Outdoor"]
+
+Group house                 "Haus"                                              (AU)            ["House"]
+Group EG                                                                        (house)         ["GroundFloor"]
+Group OG                                                                        (house)         ["FirstFloor"]
+Group UG                                                                        (house)         ["Attic"]
+
+Group GR                                                                        (AU)            ["Garage"]
+Group CH                                                                        (AU)            ["Shed"]
+
+Group SunsetLights          "used in rule SunsetLights"
+Group AlwaysTimer           "used in timer rule"
+Group ChickenOuterLights    "Hühner-Haus Zeitsteuerung" 	    <bath> 			(Aussen)
+
+Group EG_WZ                 "Wohnzimmer"                        <video>         (EG)   ["LivingRoom"]
+Group EG_KU                 "Küche"                             <kitchen>       (EG)   ["Kitchen"]
+Group EG_EZ                 "Esszimmer"                         <kitchen>       (EG)   ["DiningRoom"]
+Group EG_GA                 "Gang"                              <corridor>      (EG)   ["Corridor"]
+Group EG_GR                 "Gardarobe"                         <video>         (EG)   ["Corridor"]
+Group EG_WC                 "WC"                                <bath>          (EG)   ["Bathroom"]
+                           
+Group OG_BA                 "Badezimmer"                        <bath>          (OG)   ["Bathroom"]
+Group OG_KN                 "Leos Zimmer"                       <boy2>          (OG)   ["Bedroom"]	
+Group OG_KS                 "Kurbis Zimmer"                     <boy1>          (OG)   ["Bedroom"]	
+Group OG_SZ                 "Schlafzimmer"                      <bedroom>       (OG)   ["Bedroom"]
+Group OG_GA                 "Gang"                              <corridor>      (OG)   ["Corridor"]
+                           
+Group UG_HO                 "Hobbyraum"                         <office>        (UG)    ["Office"]
+Group UG_WK                 "Waschküche"                        <bath>          (UG)    ["LaundryRoom"]
+Group UG_HK                 "Heizkeller"                        <bath>          (UG)    ["BoilerRoom"]
+Group UG_GA                 "Gang"                              <corridor>      (UG)    ["Corridor"]
+Group UG_LA                 "Lager"                             <corridor>      (UG)    ["Cellar"]
