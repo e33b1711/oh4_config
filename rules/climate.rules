@@ -1,0 +1,68 @@
+import org.eclipse.smarthome.core.library.types.DecimalType
+import org.eclipse.smarthome.model.script.ScriptServiceUtil
+
+
+
+
+rule U_HO
+when
+    Item U_UG_HO received update
+then
+    U_UG_H1.sendCommand(U_UG_HO.state as DecimalType)
+    U_UG_H2.sendCommand(U_UG_HO.state as DecimalType)
+    U_UG_H3.sendCommand(U_UG_HO.state as DecimalType)
+end
+
+rule U_EG_GA
+when
+    Item U_EG_GA received update
+then
+    U_EG_WC.sendCommand(U_EG_GA.state as DecimalType)
+    U_EG_GR.sendCommand(U_EG_GA.state as DecimalType)
+end
+
+rule U_EZ
+when
+    Item U_EG_EZ received update
+then
+    U_EG_E1.sendCommand(U_EG_EZ.state as DecimalType)
+    U_EG_E2.sendCommand(U_EG_EZ.state as DecimalType)
+end
+
+
+rule TI_HO
+when
+    Item TI_UG_HN received update or
+    Item TI_UG_HS received update
+then
+    var Number t1 = TI_UG_HN.state as DecimalType
+    var Number t2 = TI_UG_HS.state as DecimalType
+    var Number t3 = (t1+t2)*0.5
+    if (t1 > 100){
+        t3 = t2
+    }
+    if (t2 > 100){
+        t3 = t1
+    }
+    TI_UG_HO.postUpdate(t3)
+end
+
+rule HI_HO
+when
+    Item HI_UG_HN received update or
+    Item HI_UG_HS received update
+then
+    var Number t1 = HI_UG_HN.state as DecimalType
+    var Number t2 = HI_UG_HS.state as DecimalType
+    var Number t3 = (t1+t2)*0.5
+    if (t1 > 100){
+        t3 = t2
+    }
+    if (t2 > 100){
+        t3 = t1
+    }
+    HI_UG_HO.postUpdate(t3)
+   
+end
+
+

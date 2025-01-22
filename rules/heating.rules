@@ -1,0 +1,98 @@
+import org.eclipse.smarthome.core.library.types.DecimalType
+import org.openhab.core.model.script.ScriptServiceUtil
+
+
+rule initHeat
+when
+    System started
+then
+    TS_EG_WZ.postUpdate(22)
+    TS_EG_KU.postUpdate(22)
+    TS_EG_EZ.postUpdate(22)
+    TS_EG_GA.postUpdate(20)
+    TS_OG_BA.postUpdate(24)
+    TS_OG_KN.postUpdate(22)
+    TS_OG_KS.postUpdate(22)
+    TS_OG_SZ.postUpdate(18)
+    TS_OG_GA.postUpdate(20)
+    TS_UG_HO.postUpdate(20)
+    TS_UG_WK.postUpdate(24)
+    TS_UG_GA.postUpdate(20)
+    TS_UG_LA.postUpdate(20)
+
+    c_temp.members.forEach [ item |
+        item.postUpdate(item.state as DecimalType)    
+    ]
+end
+
+rule heat_control
+when
+    Item heat_control received update
+then
+    c_temp.members.forEach [ item |
+        item.postUpdate(item.state as DecimalType)    
+    ]
+end
+        
+    
+
+
+rule HeatingControlerRule
+when
+    Member of c_temp        received update or
+    Member of temp_goal     received update
+then
+  
+    //logInfo("HeatingControllerRule: item.name:", triggeringItem.name)
+    val String item_base_name = triggeringItem.name.substring(2,8)
+    //logInfo("HeatingControllerRule", "item_base_name: >>" + item_base_name + "<<")
+     
+    val uItem   = ScriptServiceUtil.getItemRegistry.getItem("U" + item_base_name) as GenericItem
+    val tsItem  = ScriptServiceUtil.getItemRegistry.getItem("TS" + item_base_name) as GenericItem
+    val tiItem  = ScriptServiceUtil.getItemRegistry.getItem("TI" + item_base_name) as GenericItem
+    
+   
+    
+    //get input values
+    var Number temp_ist = tiItem.state as DecimalType
+    //logInfo("HeatingControllerRule", "temp_ist: " + temp_ist.toString())
+
+    //logInfo("HeatingControllerRule", "temp_soll string: >>" + "TS" + item_base_name + "<<")
+    var Number temp_soll = tsItem.state as DecimalType
+    //logInfo("HeatingControllerRule", "temp_soll: " + temp_soll.toString())
+
+    var Number u_default = 4 
+    
+    
+
+    //control algorithm
+    var Number u_nxt=0;
+    u_nxt=u_default;
+    var temp_diff = temp_ist - temp_soll
+    //logInfo("HeatingControllerRule", "temp_diff: " + temp_diff.toString())
+    if((temp_ist<1) || (temp_ist>35)){
+        u_nxt=u_default
+    }else{
+        if (temp_diff>0.5){u_nxt=2.0}
+        if (temp_diff>1){u_nxt=0.0} 
+        if (temp_diff<-1){u_nxt=6.0}
+        if (temp_diff<-2){u_nxt=10.0}
+        if (temp_diff<-3){u_nxt=15.0}
+    }
+    
+    if(heat_control.state==OFF){
+        u_nxt=0
+    }
+   
+    //postUpdate
+    //logInfo("HeatingControllerRule", "update: " + u_nxt)
+    uItem.sendCommand(u_nxt)
+    
+end
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+import org.eclipse.smarthome.core.library.types.DecimalType
+
+var boolean NBRlocked = false
+
+rule NotificationBellRule
+when
+    Item BELL received update ON
+then
+    if (!NBRlocked){
+        NBRlocked=true;
+        //var String result2=executeCommandLine("touch /srv/openhab-conf/html/cam01/test.jpg")
+        //var String result=executeCommandLine("/usr/bin/curl -m 10 -o /srv/openhab2-conf/html/cam01/latest.jpg http://192.168.178.128/capture",5000)
+        //logInfo("execCommandLine","return  value is:{}",result)
+        //logInfo("notifications", "Sending notification via app.")
+        sendNotification("e33b1711@gmail.com", "Klingel")
+        Thread::sleep(30000)
+        NBRlocked=false;
+    }
+end
+
+rule NotificationWW
+when
+    Item F_WW received update
+then
+    if ((F_WW.state as DecimalType) != 0){
+        logInfo("notifications", "WW Sending notification via app.")
+        sendNotification("e33b1711@gmail.com", "Wasserstand Pumpensumpf überprüfen!")
+    }
+end
+
+
+
+rule NotificationGarageRule
+    when
+        Time cron "0 0 21 ? * *"
+    then
+        if ((DO_GR.state as Number) != 100){
+            //logInfo("notifications", "Sending notification via app.")
+            sendNotification("e33b1711@gmail.com", "Garage nach 2100 Uhr offen.")
+        }
+end
+
+
+
+
+
+
+
+
+

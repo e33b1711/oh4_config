@@ -1,0 +1,61 @@
+import org.openhab.model.script.actions.Timer
+
+var Timer timer = null 
+
+rule "chicken_up"
+when
+        Channel 'astro:sun:chicken:rise#event' triggered START
+then
+        sendCommand(DO_CH, UP)
+        sendNotification("e33b1711@gmail.com", "chicken up")
+end
+
+rule "chicken_down"
+when
+        Channel 'astro:sun:chicken:set#event' triggered START
+then
+        sendCommand(DO_CH, DOWN)
+        sendNotification("e33b1711@gmail.com", "chicken down")
+end
+
+
+
+
+
+
+
+rule "Sunset"
+when
+	Channel 'astro:sun:local:set#event' triggered START
+then
+	ItsDark.postUpdate(ON)
+	sendNotification("e33b1711@gmail.com", "Its dark.")
+end
+
+
+rule "Sunrise"
+when
+	Channel 'astro:sun:local:rise#event' triggered START
+then
+	ItsDark.postUpdate(OFF)
+	sendNotification("e33b1711@gmail.com", "Its not dark.")
+end
+
+
+
+
+
+rule GarageOuterLight
+when
+	Item ZE_GR_1 received update ON
+then
+	logInfo("GarageOuterLight", "triggered")
+	if (ItsDark.state == ON){
+		//logInfo("GarageOuterLight", "switched")
+		sendCommand(ZE_GR_2, ON)
+		sendCommand(ZE_EG_VH, ON)
+	}
+end
+
+
+

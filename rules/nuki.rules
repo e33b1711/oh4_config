@@ -1,0 +1,30 @@
+
+
+
+rule lockNuki
+when
+	Item nuki_lock received command ON
+then
+	postUpdate(nuki_lock, OFF)
+	sendCommand(nuki_action, "lock")
+end
+
+rule unlockNuki
+when
+	Item nuki_unlock received command ON
+then
+	postUpdate(nuki_unlock, OFF)
+	sendCommand(nuki_action, "unlock")
+end
+
+rule unlatchNuki
+when
+	Item nuki_unlatch received command ON
+then
+	postUpdate(nuki_unlatch, OFF)
+	sendCommand(nuki_action, "unlatch")
+end
+
+
+
+
