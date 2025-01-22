@@ -48,26 +48,26 @@ Number HI_GR        "Feuchte Garage [%.1f %%]"              <water>             
 Number HI_AU        "Feuchte Aussen [%.1f %%]"              <water>             (humidity, AU)                   ["Humidity", "Measurement"]    { channel="mqtt:topic:mosquitto:arduino_climate:HI_AU"       ,    autoupdate="false"}
 Number HI_CH        "Feuchte Hühner-Haus [%.1f %%]"         <water>             (humidity, CH)                   ["Humidity", "Measurement"]    { channel="mqtt:topic:mosquitto:arduino_climate:HI_CH"       ,    autoupdate="false"}
 
-Number U_UG_H1      "Ist-Stellwert Hobby 1 [%.1f]"          <heating>           (heat_setpoint, UG_HO)           { channel="mqtt:topic:mosquitto:arduino_climate:U_UG_H1"     ,    autoupdate="false"}
-Number U_UG_H2      "Ist-Stellwert Hobby 2 [%.1f]"          <heating>           (heat_setpoint, UG_HO)           { channel="mqtt:topic:mosquitto:arduino_climate:U_UG_H2"     ,    autoupdate="false"}
-Number U_UG_H3      "Ist-Stellwert Hobby 3 [%.1f]"          <heating>           (heat_setpoint, UG_HO)           { channel="mqtt:topic:mosquitto:arduino_climate:U_UG_H3"     ,    autoupdate="false"}
+Number U_UG_H1      "Ist-Stellwert Hobby 1 [%.1f]"          <heating>           (heat_setpoint, UG_HO)           
+Number U_UG_H2      "Ist-Stellwert Hobby 2 [%.1f]"          <heating>           (heat_setpoint, UG_HO)           
+Number U_UG_H3      "Ist-Stellwert Hobby 3 [%.1f]"          <heating>           (heat_setpoint, UG_HO)           
 Number U_UG_HO      "Ist-Stellwert Hobby [%.1f]"            <heating>           (heat_setpoint, UG_HO)           
-Number U_UG_LA      "Ist-Stellwert Lager [%.1f]"            <heating>           (heat_setpoint, UG_LA)           { channel="mqtt:topic:mosquitto:arduino_climate:U_UG_LA"     ,    autoupdate="false"}
-Number U_UG_GA      "Ist-Stellwert Gang UG [%.1f]"          <heating>           (heat_setpoint, UG_GA)           { channel="mqtt:topic:mosquitto:arduino_climate:U_UG_GA"     ,    autoupdate="false"}
-Number U_UG_WK      "Ist-Stellwert Waschküche [%.1f]"       <heating>           (heat_setpoint, UG_WK)           { channel="mqtt:topic:mosquitto:arduino_climate:U_UG_WK"     ,    autoupdate="false"}
-Number U_EG_KU      "Ist-Stellwert Küche [%.1f]"            <heating>           (heat_setpoint, EG_KU)           { channel="mqtt:topic:mosquitto:arduino_climate:U_EG_KU"     ,    autoupdate="false"}
-Number U_EG_E1      "Ist-Stellwert Essen 1 [%.1f]"          <heating>           (heat_setpoint, EG_EZ)           { channel="mqtt:topic:mosquitto:arduino_climate:U_EG_E1"     ,    autoupdate="false"}
-Number U_EG_E2      "Ist-Stellwert Essen 2 [%.1f]"          <heating>           (heat_setpoint, EG_EZ)           { channel="mqtt:topic:mosquitto:arduino_climate:U_EG_E2"     ,    autoupdate="false"}
+Number U_UG_LA      "Ist-Stellwert Lager [%.1f]"            <heating>           (heat_setpoint, UG_LA)           
+Number U_UG_GA      "Ist-Stellwert Gang UG [%.1f]"          <heating>           (heat_setpoint, UG_GA)           
+Number U_UG_WK      "Ist-Stellwert Waschküche [%.1f]"       <heating>           (heat_setpoint, UG_WK)           
+Number U_EG_KU      "Ist-Stellwert Küche [%.1f]"            <heating>           (heat_setpoint, EG_KU)           
+Number U_EG_E1      "Ist-Stellwert Essen 1 [%.1f]"          <heating>           (heat_setpoint, EG_EZ)           
+Number U_EG_E2      "Ist-Stellwert Essen 2 [%.1f]"          <heating>           (heat_setpoint, EG_EZ)           
 Number U_EG_EZ      "Ist-Stellwert Essenzimmer [%.1f]"      <heating>           (heat_setpoint, EG_EZ)           
-Number U_EG_GA      "Ist-Stellwert Gang EG [%.1f]"          <heating>           (heat_setpoint, EG_GA)           { channel="mqtt:topic:mosquitto:arduino_climate:U_EG_GA"     ,    autoupdate="false"}
-Number U_EG_WZ      "Ist-Stellwert Wohnzimmer [%.1f]"       <heating>           (heat_setpoint, EG_WZ)           { channel="mqtt:topic:mosquitto:arduino_climate:U_EG_WZ"     ,    autoupdate="false"}
-Number U_EG_GR      "Ist-Stellwert Gardarobe [%.1f]"        <heating>           (heat_setpoint, EG_GR)           { channel="mqtt:topic:mosquitto:arduino_climate:U_EG_GR"     ,    autoupdate="false"}
-Number U_EG_WC      "Ist-Stellwert WC [%.1f]"               <heating>           (heat_setpoint, EG_WC)           { channel="mqtt:topic:mosquitto:arduino_climate:U_EG_WC"     ,    autoupdate="false"}
-Number U_OG_KS      "Ist-Stellwert Kind Süd [%.1f]"         <heating>           (heat_setpoint, OG_KS)           { channel="mqtt:topic:mosquitto:arduino_climate:U_OG_KS"     ,    autoupdate="false"}
-Number U_OG_KN      "Ist-Stellwert Kind Nord [%.1f]"        <heating>           (heat_setpoint, OG_KN)           { channel="mqtt:topic:mosquitto:arduino_climate:U_OG_KN"     ,    autoupdate="false"}
-Number U_OG_GA      "Ist-Stellwert Gang OG [%.1f]"          <heating>           (heat_setpoint, OG_GA)           { channel="mqtt:topic:mosquitto:arduino_climate:U_OG_GA"     ,    autoupdate="false"}
-Number U_OG_BA      "Ist-Stellwert Badezimmer [%.1f]"       <heating>           (heat_setpoint, OG_BA)           { channel="mqtt:topic:mosquitto:arduino_climate:U_OG_BA"     ,    autoupdate="false"}
-Number U_OG_SZ      "Ist-Stellwert Schlafzimmer [%.1f]"     <heating>           (heat_setpoint, OG_SZ)           { channel="mqtt:topic:mosquitto:arduino_climate:U_OG_SZ"     ,    autoupdate="false"}
+Number U_EG_GA      "Ist-Stellwert Gang EG [%.1f]"          <heating>           (heat_setpoint, EG_GA)           
+Number U_EG_WZ      "Ist-Stellwert Wohnzimmer [%.1f]"       <heating>           (heat_setpoint, EG_WZ)           
+Number U_EG_GR      "Ist-Stellwert Gardarobe [%.1f]"        <heating>           (heat_setpoint, EG_GR)           
+Number U_EG_WC      "Ist-Stellwert WC [%.1f]"               <heating>           (heat_setpoint, EG_WC)           
+Number U_OG_KS      "Ist-Stellwert Kind Süd [%.1f]"         <heating>           (heat_setpoint, OG_KS)           
+Number U_OG_KN      "Ist-Stellwert Kind Nord [%.1f]"        <heating>           (heat_setpoint, OG_KN)           
+Number U_OG_GA      "Ist-Stellwert Gang OG [%.1f]"          <heating>           (heat_setpoint, OG_GA)           
+Number U_OG_BA      "Ist-Stellwert Badezimmer [%.1f]"       <heating>           (heat_setpoint, OG_BA)           
+Number U_OG_SZ      "Ist-Stellwert Schlafzimmer [%.1f]"     <heating>           (heat_setpoint, OG_SZ)           
 
 Number TS_EG_WZ     "Soll-Temp. Wohnzimmer [%.1f °C]"       <temperature>       (temp_goal, EG_WZ)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1]}
 Number TS_EG_KU     "Soll-Temp. Küche [%.1f °C]"            <temperature>       (temp_goal, EG_KU)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1]}
