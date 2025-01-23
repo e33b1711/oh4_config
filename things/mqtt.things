@@ -1,4 +1,4 @@
-Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="192.168.178.52", port=1883, secure=false, clientID="openHAB4", quos=1]
+Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, secure=false, clientID="openHAB4", quos=1]
 {
 
     //power node
