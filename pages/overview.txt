@@ -1,0 +1,187 @@
+Administration
+Pages
+Search
+4 pages
+
+H
+O
+P
+R
+Overview
+ Run mode (Ctrl-R)
+1
+config:
+2
+  label: Overview
+3
+blocks:
+4
+  - component: oh-block
+5
+    config: {}
+6
+    slots:
+7
+      default:
+8
+        - component: oh-grid-cells
+9
+          config: {}
+10
+          slots:
+11
+            default:
+12
+              - component: oh-cell
+13
+                config:
+14
+                  action: toggle
+15
+                  actionCommand: ON
+16
+                  actionCommandAlt: OFF
+17
+                  actionItem: PUMP
+18
+                  color: blue
+19
+                  item: PUMP
+20
+                  stateAsHeader: true
+21
+                  title: Zisternenpumpe
+22
+              - component: oh-rollershutter-cell
+23
+                config:
+24
+                  icon: rollershutter
+25
+                  iconUseState: true
+26
+                  item: DO_CH
+27
+                  stateAsHeader: true
+28
+                  stateInCenter: true
+29
+                  title: Hühner-Klappe
+30
+              - component: oh-cell
+31
+                config:
+32
+                  action: toggle
+33
+                  actionCommand: ON
+34
+                  actionCommandAlt: OFF
+35
+                  actionItem: LI_CH
+36
+                  color: blue
+37
+                  item: LI_CH
+38
+                  stateAsHeader: true
+39
+                  title: Licht Hühner-Haus
+40
+              - component: oh-cell
+41
+                config:
+42
+                  action: toggle
+43
+                  actionCommand: ON
+44
+                  actionCommandAlt: OFF
+45
+                  actionItem: night_timer
+46
+                  color: blue
+47
+                  item: night_timer
+48
+                  stateAsHeader: true
+49
+                  title: 10 min Timer Nachts
+50
+  - component: oh-block
+51
+    config: {}
+52
+    slots:
+53
+      default:
+54
+        - component: oh-grid-cells
+55
+          config: {}
+56
+          slots:
+57
+            default: []
+58
+masonry:
+59
+  - component: oh-masonry
+60
+    slots:
+61
+      default:
+62
+        - component: oh-label-card
+63
+          config:
+64
+            action: group
+65
+            actionGroupPopupItem: CHARGER
+66
+            item: CHARGER
+67
+            label: Charger Power
+68
+            title: Charger
+69
+            trendItem: charger_power
+70
+        - component: oh-label-card
+71
+          config:
+72
+            action: group
+73
+            actionGroupPopupItem: ESS
+74
+            item: ESS
+75
+            label: State of Charge
+76
+            title: ESS
+77
+            trendItem: state_of_charge
+78
+        - component: oh-label-card
+79
+          config:
+80
+            action: group
+81
+            actionGroupPopupItem: HEAT
+82
+            item: HEAT
+83
+            label: Temp (top)
+84
+            title: Heat
+85
+            trendItem: TI_PU_O
+86
+grid: null
+87
+canvas: null
+88
+​

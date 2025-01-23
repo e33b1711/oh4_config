@@ -1,0 +1,143 @@
+config:
+  label: Raum-Klima
+  sidebar: true
+  visibleTo:
+    - role:administrator
+    - role:user
+blocks:
+  - component: oh-block
+    config:
+      title: Obergeschoss
+    slots:
+      default:
+        - component: oh-grid-cells
+          config: {}
+          slots:
+            default:
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_OG_BA
+                  humidity_item: HI_OG_BA
+                  set_temp_item: TS_OG_BA
+                  temp_item: TI_OG_BA
+                  title: Badezimmer
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_OG_KN
+                  humidity_item: HI_OG_KN
+                  set_temp_item: TS_OG_KN
+                  temp_item: TI_OG_KN
+                  title: Leo's Zimmer
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_OG_KS
+                  humidity_item: HI_OG_KS
+                  set_temp_item: TS_OG_KS
+                  temp_item: TI_OG_KS
+                  title: Bini's Zimmer
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_OG_SZ
+                  humidity_item: HI_OG_SZ
+                  set_temp_item: TS_OG_SZ
+                  temp_item: TI_OG_SZ
+                  title: Schlafzimmer
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_OG_GA
+                  humidity_item: HI_OG_GA
+                  set_temp_item: TS_OG_GA
+                  temp_item: TI_OG_GA
+                  title: Gang OG
+  - component: oh-block
+    config:
+      title: Erdgeschoss
+    slots:
+      default:
+        - component: oh-grid-cells
+          config: {}
+          slots:
+            default:
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_EG_WZ
+                  humidity_item: HI_EG_WZ
+                  set_temp_item: TS_EG_WZ
+                  temp_item: TI_EG_WZ
+                  title: Wohnzimmer
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_EG_E1
+                  humidity_item: HI_EG_EZ
+                  set_temp_item: TS_EG_EZ
+                  temp_item: TI_EG_EZ
+                  title: Esszimmer
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_EG_KU
+                  humidity_item: HI_EG_KU
+                  set_temp_item: TS_EG_KU
+                  temp_item: TI_EG_KU
+                  title: Küche
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_EG_GA
+                  humidity_item: HI_EG_GA
+                  set_temp_item: TS_EG_GA
+                  temp_item: TI_EG_GA
+                  title: Gang EG (+Gardarobe / WC)
+  - component: oh-block
+    config:
+      title: Keller
+    slots:
+      default:
+        - component: oh-grid-cells
+          config: {}
+          slots:
+            default:
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_UG_HO
+                  humidity_item: HI_UG_HO
+                  set_temp_item: TS_UG_HO
+                  temp_item: TI_UG_HO
+                  title: Hobbyraum
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_UG_WK
+                  humidity_item: HI_UG_WK
+                  set_temp_item: TS_UG_WK
+                  temp_item: TI_UG_WK
+                  title: Waschküche
+              - component: widget:Cell_Temp_Card_1
+                config:
+                  heating_item: U_UG_GA
+                  humidity_item: HI_UG_GA
+                  set_temp_item: TS_UG_GA
+                  temp_item: TI_UG_GA
+                  title: Gang UG
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-row
+          config: {}
+          slots:
+            default: []
+        - component: oh-grid-cells
+          config: {}
+          slots:
+            default:
+              - component: oh-cell
+                config:
+                  action: toggle
+                  actionCommand: ON
+                  actionCommandAlt: OFF
+                  actionItem: heat_control
+                  color: blue
+                  item: heat_control
+                  stateAsHeader: true
+                  title: Heizungsregelung
+masonry: null
+grid: []
+canvas: []

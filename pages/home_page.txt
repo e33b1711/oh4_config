@@ -1,0 +1,97 @@
+config:
+  label: Home Page
+locations:
+  - component: oh-locations-tab
+    config: {}
+    slots:
+      AU:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/AU.jfif
+      CH:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/CH.jfif
+      EG:
+        - component: oh-location-card
+          config: {}
+      EG_EZ:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/EG_EZ.jfif
+      EG_GA:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/EG_GA.jfif
+      EG_GR:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/EG_GR.jfif
+      EG_KU:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/EG_KU.jfif
+      EG_WC:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/EG_WC.jfif
+      EG_WZ:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/EG_WZ.jfif
+      GR:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/GR.jfif
+      OG_BA:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/OG_BA.jfif
+      OG_GA:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/OG_GA.jfif
+      OG_KN:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/OG_KN.jfif
+      OG_KS:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/OG_KS.jfif
+      OG_SZ:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/OG_SZ.jfif
+      UG_GA:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/UG_GA.jfif
+      UG_HK:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/UG_HK.jfif
+      UG_HO:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/UG_HO.jfif
+      UG_LA:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/UG_LA.jfif
+      UG_WK:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/UG_WK.jfif
+      house:
+        - component: oh-location-card
+          config:
+            backgroundImage: /static/house.jfif
+equipment:
+  - component: oh-equipment-tab
+    config: {}
+    slots: {}
+properties:
+  - component: oh-properties-tab
+    config: {}
+    slots: {}
