@@ -82,4 +82,19 @@ Number TS_UG_HO     "Soll-Temp. Hobby [%.1f °C]"            <temperature>      
 Number TS_UG_WK     "Soll-Temp. Waschküche [%.1f °C]"       <temperature>       (temp_goal, UG_WK)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1]}
 Number TS_UG_GA     "Soll-Temp. Gang UG [%.1f °C]"          <temperature>       (temp_goal, UG_GA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1]}
 Number TS_UG_LA     "Soll-Temp. Lager [%.1f °C]"            <temperature>       (temp_goal, UG_LA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1]}
+
+Group UL (climate)
+Number UL_EG_WZ     "Integralwert Wohnzimmer [%.1f °C]"       <temperature>       (EG_WZ, UL)     ["Temperature", "Measurement"]
+Number UL_EG_KU     "Integralwert Küche [%.1f °C]"            <temperature>       (EG_KU, UL)     ["Temperature", "Measurement"]
+Number UL_EG_EZ     "Integralwert Esszimmer [%.1f °C]"        <temperature>       (EG_EZ, UL)     ["Temperature", "Measurement"]
+Number UL_EG_GA     "Integralwert Gang EG [%.1f °C]"          <temperature>       (EG_GA, UL)     ["Temperature", "Measurement"]
+Number UL_OG_BA     "Integralwert Badezimmer [%.1f °C]"       <temperature>       (OG_BA, UL)     ["Temperature", "Measurement"]
+Number UL_OG_KN     "Integralwert Leos Zimmer [%.1f °C]"      <temperature>       (OG_KN, UL)     ["Temperature", "Measurement"]
+Number UL_OG_KS     "Integralwert Kurbis Zimmer [%.1f °C]"    <temperature>       (OG_KS, UL)     ["Temperature", "Measurement"]
+Number UL_OG_SZ     "Integralwert Schlafzimmer [%.1f °C]"     <temperature>       (OG_SZ, UL)     ["Temperature", "Measurement"]
+Number UL_OG_GA     "Integralwert Gang OG [%.1f °C]"          <temperature>       (OG_GA, UL)     ["Temperature", "Measurement"]
+Number UL_UG_HO     "Integralwert Hobby [%.1f °C]"            <temperature>       (UG_HO, UL)     ["Temperature", "Measurement"]
+Number UL_UG_WK     "Integralwert Waschküche [%.1f °C]"       <temperature>       (UG_WK, UL)     ["Temperature", "Measurement"]
+Number UL_UG_GA     "Integralwert Gang UG [%.1f °C]"          <temperature>       (UG_GA, UL)     ["Temperature", "Measurement"]
+Number UL_UG_LA     "Integralwert Lager [%.1f °C]"            <temperature>       (UG_LA, UL)     ["Temperature", "Measurement"]
                                                                                                    
