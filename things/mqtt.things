@@ -167,14 +167,14 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="192.168.178.52", port=18
 
     Thing topic node_info "Arduino Rollershutter" @ "debug" {
     Channels:    
-        Type string : revision_og_we  	"revision_og_we"    [ stateTopic="ard_state/revision_og_we"  ]     
-        Type string : revision_og_ost 	"revision_og_ost"   [ stateTopic="ard_state/revision_og_ost" ]   
-        Type string : revision_eg_we  	"revision_eg_we"    [ stateTopic="ard_state/revision_eg_we"  ]   
-        Type string : revision_eg_ost 	"revision_eg_ost"   [ stateTopic="ard_state/revision_eg_ost" ]    
-        Type string : revision_ug     	"revision_ug"       [ stateTopic="ard_state/revision_ug"     ]  
-        Type string : revision_power  	"revision_power"    [ stateTopic="ard_state/revision_power"  ]   
-        Type string : revision_ch     	"revision_ch"       [ stateTopic="ard_state/revision_ch"     ] 
-        Type string : revision_garage 	"revision_garage"   [ stateTopic="ard_state/revision_garage" ]         
+        Type string : revision_og_west	"revision_og_west"  [ stateTopic="ard_state/og_west"]     
+        Type string : revision_og_ost 	"revision_og_ost"   [ stateTopic="ard_state/og_ost" ]   
+        Type string : revision_eg_west	"revision_eg_west"  [ stateTopic="ard_state/eg_west"]   
+        Type string : revision_eg_ost 	"revision_eg_ost"   [ stateTopic="ard_state/eg_ost" ]    
+        Type string : revision_ug     	"revision_ug"       [ stateTopic="ard_state/ug"     ]  
+        Type string : revision_power  	"revision_power"    [ stateTopic="ard_state/power"  ]   
+        Type string : revision_ch     	"revision_ch"       [ stateTopic="ard_state/ch"     ] 
+        Type string : revision_garage 	"revision_garage"   [ stateTopic="ard_state/garage" ]         
     }                                                                                                                                                                           	  
 }
 
