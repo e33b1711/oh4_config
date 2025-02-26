@@ -2,53 +2,53 @@ Group Lights
 
 Switch night_timer      "10 min Timer Nachts"                                                                   
 
-Switch LI_EG_WZ         "Decke Mitte"                                       (Lights, EG_WZ)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_WZ",        autoupdate="false"}
-Switch LI_EG_WZ_L1      "Decke vorn"                                        (Lights, EG_WZ)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_WZ_L1",     autoupdate="false"}
-Switch LI_EG_WZ_L2      "Decke hinten"                                      (Lights, EG_WZ)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_WZ_L2",     autoupdate="false"}
-Switch LI_EG_KU_L1      "Arbeitsbeleuchtung"                                (Lights, EG_KU)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_KU_L1",     autoupdate="false"}
-Switch LI_EG_EZ         "Esstisch"                                          (Lights, EG_EZ)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_EZ",        autoupdate="false"}
-Switch LI_EG_EZ_L1      "Wandleuchten"                                      (Lights, EG_EZ)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_EZ_L1",     autoupdate="false"}
-Switch LI_EG_EZ_L3      "Leselampe"                                         (Lights, EG_EZ)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_EZ_L3",     autoupdate="false"}
-Switch LI_EG_EZ_KU      "Grundbeleuchtung"                                  (Lights, EG_EZ, EG_KU)                        ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_EZ_KU",     autoupdate="false"}
-Switch LI_EG_GA         "Decke"                                             (Lights, EG_GA, AlwaysTimer)                  ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_GA",        autoupdate="false"}
-Switch LI_GA_L1         "Wandleuchten"                                      (Lights, EG_GA, SunsetLights)                 ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_GA_L1",        autoupdate="false"}
-Switch LI_EG_GR         "Decke"                                             (Lights, EG_GR, AlwaysTimer)                  ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_GR",        autoupdate="false"}
-Switch LI_EG_WC         "Decke"                                             (Lights, EG_WC)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_WC",        autoupdate="false"}
-Switch LI_EG_SP         "Speis"                                             (Lights, EG_KU)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_SP",        autoupdate="false"}
-Switch LI_OG_BA         "Decke"                                             (Lights, OG_BA)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_BA",        autoupdate="false"}
-Switch LI_OG_KN         "Decke"                                             (Lights, OG_KN)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_KN",        autoupdate="false"}
-Switch LI_OG_KN_L1      "Spots"                                             (Lights, OG_KN)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_KN_L1",     autoupdate="false"}
-Switch LI_OG_KS         "Decke"                                             (Lights, OG_KS)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_KS",        autoupdate="false"}
-Switch LI_OG_KS_L1      "Spots"                                             (Lights, OG_KS)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_KS_L1",     autoupdate="false"}
-Switch LI_OG_SZ         "Decke"                                             (Lights, OG_SZ)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_SZ",        autoupdate="false"}
-Switch LI_OG_SZ_L1      "Leselampe Melli"                                   (Lights, OG_SZ)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_SZ_L1",     autoupdate="false"}
-Switch LI_OG_SZ_L2      "Leselampe Anselm"                                  (Lights, OG_SZ)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_SZ_L2",     autoupdate="false"}
-Switch LI_OG_GA         "Decke"                                             (Lights, OG_GA)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_GA",        autoupdate="false"}
-Switch LI_OG_GA_L1      "Spots"                                             (Lights, OG_GA)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_GA_L1",     autoupdate="false"}
-Switch LI_UG_HO         "Licht Hobbyraum Büro"                              (Lights, UG_HO)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_HO",        autoupdate="false"}
-Switch LI_UG_WK         "Licht Waschküche"                                  (Lights, UG_WK)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_WK",        autoupdate="false"}
-Switch LI_UG_HK         "Licht Heizkeller"                                  (Lights, UG_HK)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_HK",        autoupdate="false"}
-Switch LI_UG_GA         "Licht Kellergang"                                  (Lights, UG_GA, AlwaysTimer)                  ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_GA",        autoupdate="false"}
-Switch LI_UG_HN         "Licht Hobbyraum Nord"                              (Lights, UG_HO)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_HN",        autoupdate="false"}
-Switch LI_UG_TR         "Licht Keller Treppe"                               (Lights, UG_GA)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_TR",        autoupdate="false"}
-Switch LI_EG_VH         "Vordach"                                           (Lights, house)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_VH",        autoupdate="false"}
-Switch ZE_EG_VH         "Vordach Timer"                                     (house)                                       ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:ZE_EG_VH",        autoupdate="false"}
-Switch LI_EG_AS         "Terrasse Süden"                                    (Lights, house)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_AS",        autoupdate="false"}
-Switch LI_EG_AW         "Terrasse Westen"                                   (Lights, house)                               ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_AW",        autoupdate="false"}
-Switch LI_EG_AO         "Wand Osten"                                        (Lights, house, SunsetLights)                 ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_AO",        autoupdate="false"}
-Switch LI_GR            "Grundbeleuchtung"                                  (Lights, GR)                                  ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_GR",           autoupdate="false"}
-Switch LI_GR_L1         "Aussen"                                            (Lights, GR)                                  ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_GR_L1",        autoupdate="false"}
-Switch LI_GR_L2         "Aussen Zustatz"                                    (Lights, GR)                                  ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_GR_L2",        autoupdate="false"}
-Switch ZE_GR_0          "Timer Innen 10 min"                                (GR)                                          ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_0",         autoupdate="false"}
-Switch ZE_GR_1          "Timer Innen 2 min"                                 (GR)                                          ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_1",         autoupdate="false"}
-Switch ZE_GR_2          "Timer Außen"                                       (GR)                                          ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_2",         autoupdate="false"}
-Switch LI_CH 	        "Licht Hühner-Haus"	                                (Lights, CH)                                  ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH",           autoupdate="false"}  
-Switch LI_CH_L2         "Licht Hühner-Haus (L2)"                            (Lights, CH, ChickenOuterLights)              ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L2",        autoupdate="false"}
-Switch LI_CH_L3         "Licht Hühner-Haus (L3)"                            (Lights, CH)                                  ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L3",        autoupdate="false"}
-Switch LI_CH_L4         "Licht Hühner-Haus (L4)"                            (Lights, CH)                                  ["Lightbulb"]               { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L4",        autoupdate="false"}
-Switch BELL             "Klingel"                                           (EG_GA)                                       ["Siren"]                   { channel="mqtt:topic:mosquitto:arduino_lights:BELL",            autoupdate="false"}
+Switch LI_EG_WZ         "Decke Mitte"            <light>  (Lights, EG_WZ)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_WZ",    autoupdate="false"}
+Switch LI_EG_WZ_L1      "Decke vorn"             <light>  (Lights, EG_WZ)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_WZ_L1", autoupdate="false"}
+Switch LI_EG_WZ_L2      "Decke hinten"           <light>  (Lights, EG_WZ)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_WZ_L2", autoupdate="false"}
+Switch LI_EG_KU_L1      "Arbeitsbeleuchtung"     <light>  (Lights, EG_KU)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_KU_L1", autoupdate="false"}
+Switch LI_EG_EZ         "Esstisch"               <light>  (Lights, EG_EZ)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_EZ",    autoupdate="false"}
+Switch LI_EG_EZ_L1      "Wandleuchten"           <light>  (Lights, EG_EZ)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_EZ_L1", autoupdate="false"}
+Switch LI_EG_EZ_L3      "Leselampe"              <light>  (Lights, EG_EZ)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_EZ_L3", autoupdate="false"}
+Switch LI_EG_EZ_KU      "Grundbeleuchtung"       <light>  (Lights, EG_EZ, EG_KU)           ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_EZ_KU", autoupdate="false"}
+Switch LI_EG_GA         "Decke"                  <light>  (Lights, EG_GA, AlwaysTimer)     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_GA",    autoupdate="false"}
+Switch LI_GA_L1         "Wandleuchten"           <light>  (Lights, EG_GA, SunsetLights)    ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_GA_L1",    autoupdate="false"}
+Switch LI_EG_GR         "Decke"                  <light>  (Lights, EG_GR, AlwaysTimer)     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_GR",    autoupdate="false"}
+Switch LI_EG_WC         "Decke"                  <light>  (Lights, EG_WC)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_WC",    autoupdate="false"}
+Switch LI_EG_SP         "Speis"                  <light>  (Lights, EG_KU)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_SP",    autoupdate="false"}
+Switch LI_OG_BA         "Decke"                  <light>  (Lights, OG_BA)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_BA",    autoupdate="false"}
+Switch LI_OG_KN         "Decke"                  <light>  (Lights, OG_KN)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_KN",    autoupdate="false"}
+Switch LI_OG_KN_L1      "Spots"                  <light>  (Lights, OG_KN)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_KN_L1", autoupdate="false"}
+Switch LI_OG_KS         "Decke"                  <light>  (Lights, OG_KS)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_KS",    autoupdate="false"}
+Switch LI_OG_KS_L1      "Spots"                  <light>  (Lights, OG_KS)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_KS_L1", autoupdate="false"}
+Switch LI_OG_SZ         "Decke"                  <light>  (Lights, OG_SZ)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_SZ",    autoupdate="false"}
+Switch LI_OG_SZ_L1      "Leselampe Melli"        <light>  (Lights, OG_SZ)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_SZ_L1", autoupdate="false"}
+Switch LI_OG_SZ_L2      "Leselampe Anselm"       <light>  (Lights, OG_SZ)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_SZ_L2", autoupdate="false"}
+Switch LI_OG_GA         "Decke"                  <light>  (Lights, OG_GA)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_GA",    autoupdate="false"}
+Switch LI_OG_GA_L1      "Spots"                  <light>  (Lights, OG_GA)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_OG_GA_L1", autoupdate="false"}
+Switch LI_UG_HO         "Licht Hobbyraum Büro"   <light>  (Lights, UG_HO)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_HO",    autoupdate="false"}
+Switch LI_UG_WK         "Licht Waschküche"       <light>  (Lights, UG_WK)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_WK",    autoupdate="false"}
+Switch LI_UG_HK         "Licht Heizkeller"       <light>  (Lights, UG_HK)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_HK",    autoupdate="false"}
+Switch LI_UG_GA         "Licht Kellergang"       <light>  (Lights, UG_GA, AlwaysTimer)     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_GA",    autoupdate="false"}
+Switch LI_UG_HN         "Licht Hobbyraum Nord"   <light>  (Lights, UG_HO)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_HN",    autoupdate="false"}
+Switch LI_UG_TR         "Licht Keller Treppe"    <light>  (Lights, UG_GA)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_UG_TR",    autoupdate="false"}
+Switch LI_EG_VH         "Vordach"                <light>  (Lights, house)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_VH",    autoupdate="false"}
+Switch ZE_EG_VH         "Vordach Timer"          <light>  (house)                          ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_EG_VH",    autoupdate="false"}
+Switch LI_EG_AS         "Terrasse Süden"         <light>  (Lights, house)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_AS",    autoupdate="false"}
+Switch LI_EG_AW         "Terrasse Westen"        <light>  (Lights, house)                  ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_AW",    autoupdate="false"}
+Switch LI_EG_AO         "Wand Osten"             <light>  (Lights, house, SunsetLights)    ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_AO",    autoupdate="false"}
+Switch LI_GR            "Grundbeleuchtung"       <light>  (Lights, GR)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_GR",       autoupdate="false"}
+Switch LI_GR_L1         "Aussen"                 <light>  (Lights, GR)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_GR_L1",    autoupdate="false"}
+Switch LI_GR_L2         "Aussen Zustatz"         <light>  (Lights, GR)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_GR_L2",    autoupdate="false"}
+Switch ZE_GR_0          "Timer Innen 10 min"     <light>  (GR)                             ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_0",     autoupdate="false"}
+Switch ZE_GR_1          "Timer Innen 2 min"      <light>  (GR)                             ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_1",     autoupdate="false"}
+Switch ZE_GR_2          "Timer Außen"            <light>  (GR)                             ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_2",     autoupdate="false"}
+Switch LI_CH 	        "Licht Hühner-Haus"	     <light>  (Lights, CH)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH",       autoupdate="false"}  
+Switch LI_CH_L2         "Licht Hühner-Haus (L2)" <light>  (Lights, CH, ChickenOuterLights) ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L2",    autoupdate="false"}
+Switch LI_CH_L3         "Licht Hühner-Haus (L3)" <light>  (Lights, CH)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L3",    autoupdate="false"}
+Switch LI_CH_L4         "Licht Hühner-Haus (L4)" <light>  (Lights, CH)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L4",    autoupdate="false"}
+Switch BELL             "Klingel"                <siren>  (EG_GA)                          ["Siren"]     { channel="mqtt:topic:mosquitto:arduino_lights:BELL",        autoupdate="false"}
 
 Group PumpTimer
-Switch PUMP             "Zisternenpumpe"                                    (AU, PumpTimer)                               ["Pump"]                    { channel="mqtt:topic:mosquitto:arduino_lights:PUMP",            autoupdate="false"}
+Switch PUMP             "Zisternenpumpe"         <pump>   (AU, PumpTimer)                  ["Pump"]      { channel="mqtt:topic:mosquitto:arduino_lights:PUMP",        autoupdate="false"}
 
 
