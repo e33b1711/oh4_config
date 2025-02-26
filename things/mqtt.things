@@ -151,6 +151,7 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="192.168.178.52", port=18
         Type rollershutter : RO_EG_WE 	"RO_EG_WE"   [ stateTopic="ard_state/RO_EG_WE" , commandTopic="ard_command/RO_EG_WE" ]     
         Type rollershutter : RO_OG_BA 	"RO_OG_BA"   [ stateTopic="ard_state/RO_OG_BA" , commandTopic="ard_command/RO_OG_BA" ]     
         Type rollershutter : DF_OG_GA	"DF_OG_GA"   [ stateTopic="ard_state/DF_OG_GA" , commandTopic="ard_command/DF_OG_GA" ]     
+        Type rollershutter : VD_OG_GA	"VD_OG_GA"   [ stateTopic="ard_state/VD_OG_GA" , commandTopic="ard_command/VD_OG_GA" ]     
         Type rollershutter : RO_OG_KN 	"RO_OG_KN"   [ stateTopic="ard_state/RO_OG_KN" , commandTopic="ard_command/RO_OG_KN" ]     
         Type rollershutter : VD_OG_KN	"VD_OG_KN"   [ stateTopic="ard_state/VD_OG_KN" , commandTopic="ard_command/VD_OG_KN" ]     
         Type rollershutter : DF_OG_KN	"DF_OG_KN"   [ stateTopic="ard_state/DF_OG_KN" , commandTopic="ard_command/DF_OG_KN" ]     
