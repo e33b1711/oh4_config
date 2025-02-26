@@ -25,7 +25,6 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="192.168.178.52", port=18
         Type number : TI_PU_O               "TI_PU_O"               [ stateTopic="ard_state/TI_PU_O"                                                                        ]
         Type number : TI_PU_U               "TI_PU_O"               [ stateTopic="ard_state/TI_PU_U"                                                                        ]
         Type number : F_HE                  "Gas Heater"            [ stateTopic="ard_state/F_HE"                                                                           ]
-        Type number : F_WW                  "Water Warning"         [ stateTopic="ard_state/F_WW"                                                                           ]
     }
 
     Thing topic arduino_lights "Arduino Lights" @ "debug" {

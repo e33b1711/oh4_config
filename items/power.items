@@ -27,10 +27,7 @@ Number  charger_setpoint        "Charger setpoint [%d A]"                  <pres
 Number  TI_PU_O                 "Temperature (Top)    [%.1f °C]"           <temperature>    (HEAT)       ["Measurement", "Temperature"]   { channel="mqtt:topic:mosquitto:power_control:TI_PU_O",                  autoupdate="false"} 
 Number  TI_PU_U                 "Temperature (Middle) [%.1f °C]"           <temperature>    (HEAT)       ["Measurement", "Temperature"]   { channel="mqtt:topic:mosquitto:power_control:TI_PU_U",                  autoupdate="false"} 
 Number  U_EL                    "Heating Setpoint [%.1f]"                  <pressure>       (HEAT)       ["Setpoint"]                     { channel="mqtt:topic:mosquitto:power_control:U_EL",                     autoupdate="false"} 
-Number  F_HE                    "Gas Heating"                              <pressure>       (HEAT)       ["Setpoint"]                     { channel="mqtt:topic:mosquitto:power_control:F_HE",                     autoupdate="false"} 
-Number  F_WW                    "Water Warning"                            <water>          (HEAT)       ["Measurement"]                  { channel="mqtt:topic:mosquitto:power_control:F_WW",                     autoupdate="false"} 
-
-
+Number  F_HE                    "Gas Heating"                              <pressure>       (HEAT)       ["Setpoint"]                     { channel="mqtt:topic:mosquitto:power_control:F_HE",                     autoupdate="false"}
 
 
 
