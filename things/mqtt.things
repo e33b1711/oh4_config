@@ -96,7 +96,7 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="192.168.178.52", port=18
         Type number        : TI_UG_LA       "TI_UG_LA"                         [ stateTopic="ard_state/TI_UG_LA" ]         
         Type number        : TI_GR          "TI_GR"                            [ stateTopic="ard_state/TI_GR"    ]         
         Type number        : TI_AU          "TI_AU"                            [ stateTopic="ard_state/TI_AU"    ]         
-        Type number        : TI_CH 	        "TI_CH"                            [ stateTopic="ard_state/TI_CH"    ]         
+        Type number        : TI_CH 	        "TI_CH"                            [ stateTopic="ard_state/TI_CH"    ]          
         Type number        : HI_EG_WZ       "HI_EG_WZ"                         [ stateTopic="ard_state/HI_EG_WZ" ]         
         Type number        : HI_EG_KU       "HI_EG_KU"                         [ stateTopic="ard_state/HI_EG_KU" ]         
         Type number        : HI_EG_EZ       "HI_EG_EZ"                         [ stateTopic="ard_state/HI_EG_EZ" ]         
@@ -174,7 +174,7 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="192.168.178.52", port=18
         Type string : revision_ug     	"revision_ug"       [ stateTopic="ard_state/ug"     ]  
         Type string : revision_power  	"revision_power"    [ stateTopic="ard_state/power"  ]   
         Type string : revision_ch     	"revision_ch"       [ stateTopic="ard_state/ch"     ] 
-        Type string : revision_garage 	"revision_garage"   [ stateTopic="ard_state/garage" ]         
+        Type string : revision_garage 	"revision_garage"   [ stateTopic="ard_state/gr" ]         
     }                                                                                                                                                                           	  
 }
 
