@@ -1,17 +1,17 @@
-Rollershutter RO_EG_SU  "Rollo Süd"                          (EG_EZ)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_EG_SU",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter RO_EG_WE  "Rollo West"                         (EG_EZ)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_EG_WE",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter RO_OG_BA  "Rollo"                              (OG_BA)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_OG_BA",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter RO_OG_KN  "Rollo"                              (OG_KN)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_OG_KN",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter VD_OG_KN  "Verdunkelung Dachfenster"           (OG_KN)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:VD_OG_KN",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter DF_OG_KN  "Dachfenster"                        (OG_KN)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:DF_OG_KN",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter RO_OG_KS  "Rollo"                              (OG_KS)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_OG_KS",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter VD_OG_KS  "Verdunkelung Dachfenster"           (OG_KS)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:VD_OG_KS",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter DF_OG_KS  "Dachfenster"                        (OG_KS)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:DF_OG_KS",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter RO_OG_SZ  "Rollo"                              (OG_SZ)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_OG_SZ",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter VD_OG_SZ  "Verdunkelung Dachfenster"           (OG_SZ)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:VD_OG_SZ",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter DF_OG_SZ  "Dachfenster"                        (OG_SZ)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:DF_OG_SZ",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter VD_OG_GA  "Verdunkelung Dachfenster"           (OG_GA)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:VD_OG_GA",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter DF_OG_GA  "Dachfenster"                        (OG_GA)   ["Blinds"]         { channel="mqtt:topic:mosquitto:arduino_rollershutter:DF_OG_GA",        autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter DO_GR     "Garagentor"                         (GR)      ["Gate"]           { channel="mqtt:topic:mosquitto:arduino_rollershutter:DO_GR",           autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
-Rollershutter DO_CH	    "Hühner-Klappe" 	                 (CH)      ["Gate"]           { channel="mqtt:topic:mosquitto:arduino_rollershutter:DO_CH",           autoupdate="false", listWidget="oh-rollershutter-item"[stateInCenter=true]}
+Rollershutter RO_EG_SU  "Rollo Süd"                <rollershutter> (EG_EZ) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_EG_SU", autoupdate="false" }
+Rollershutter RO_EG_WE  "Rollo West"               <rollershutter> (EG_EZ) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_EG_WE", autoupdate="false" }
+Rollershutter RO_OG_BA  "Rollo"                    <rollershutter> (OG_BA) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_OG_BA", autoupdate="false" }
+Rollershutter RO_OG_KN  "Rollo"                    <rollershutter> (OG_KN) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_OG_KN", autoupdate="false" }
+Rollershutter VD_OG_KN  "Verdunkelung Dachfenster" <rollershutter> (OG_KN) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:VD_OG_KN", autoupdate="false" }
+Rollershutter DF_OG_KN  "Dachfenster"              <rollershutter> (OG_KN) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:DF_OG_KN", autoupdate="false" }
+Rollershutter RO_OG_KS  "Rollo"                    <rollershutter> (OG_KS) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_OG_KS", autoupdate="false" }
+Rollershutter VD_OG_KS  "Verdunkelung Dachfenster" <rollershutter> (OG_KS) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:VD_OG_KS", autoupdate="false" }
+Rollershutter DF_OG_KS  "Dachfenster"              <rollershutter> (OG_KS) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:DF_OG_KS", autoupdate="false" }
+Rollershutter RO_OG_SZ  "Rollo"                    <rollershutter> (OG_SZ) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:RO_OG_SZ", autoupdate="false" }
+Rollershutter VD_OG_SZ  "Verdunkelung Dachfenster" <rollershutter> (OG_SZ) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:VD_OG_SZ", autoupdate="false" }
+Rollershutter DF_OG_SZ  "Dachfenster"              <rollershutter> (OG_SZ) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:DF_OG_SZ", autoupdate="false" }
+Rollershutter VD_OG_GA  "Verdunkelung Dachfenster" <rollershutter> (OG_GA) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:VD_OG_GA", autoupdate="false" }
+Rollershutter DF_OG_GA  "Dachfenster"              <rollershutter> (OG_GA) ["Blinds"] { channel="mqtt:topic:mosquitto:arduino_rollershutter:DF_OG_GA", autoupdate="false" }
+Rollershutter DO_GR     "Garagentor"               <rollershutter> (GR)    ["Gate"]   { channel="mqtt:topic:mosquitto:arduino_rollershutter:DO_GR",    autoupdate="false" }
+Rollershutter DO_CH     "Hühner-Klappe"            <rollershutter> (CH)    ["Gate"]   { channel="mqtt:topic:mosquitto:arduino_rollershutter:DO_CH",    autoupdate="false" }
 
