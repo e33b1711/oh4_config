@@ -1,10 +1,10 @@
 Group NODES             (All)     ["Site Controller"]
 
-String  revision_og_west   "Revision OG West [%S]"  { channel="mqtt:topic:mosquitto:node_info:revision_og_west", autoupdate="false"} 
+String  revision_og_west "Revision OG West [%S]"    { channel="mqtt:topic:mosquitto:node_info:revision_og_west", autoupdate="false"} 
 String  revision_og_ost  "Revision OG Ost [%S]"     { channel="mqtt:topic:mosquitto:node_info:revision_og_ost",  autoupdate="false"} 
-String  revision_eg_west   "Revision EG West [%S]"  { channel="mqtt:topic:mosquitto:node_info:revision_eg_west", autoupdate="false"} 
+String  revision_eg_west "Revision EG West [%S]"    { channel="mqtt:topic:mosquitto:node_info:revision_eg_west", autoupdate="false"} 
 String  revision_eg_ost  "Revision EG Ost [%S]"     { channel="mqtt:topic:mosquitto:node_info:revision_eg_ost",  autoupdate="false"} 
 String  revision_ug      "Revision UG [%S]"         { channel="mqtt:topic:mosquitto:node_info:revision_ug",      autoupdate="false"} 
 String  revision_power   "Revision Power [%S]"      { channel="mqtt:topic:mosquitto:node_info:revision_power",   autoupdate="false"} 
 String  revision_ch      "Revision Chicken [%S]"    { channel="mqtt:topic:mosquitto:node_info:revision_ch",      autoupdate="false"} 
-String  revision_garage  "Revision Garage [%S]"     { channel="mqtt:topic:mosquitto:node_info:revision_garage",      autoupdate="false"} 
+String  revision_garage  "Revision Garage [%S]"     { channel="mqtt:topic:mosquitto:node_info:revision_garage",  autoupdate="false"} 
