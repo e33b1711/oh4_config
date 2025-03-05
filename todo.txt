@@ -1,0 +1,13 @@
+-A (x) water warning abwickeln
+-A (x) monitor git hashes
+-A (x) VD OG GA
+-A (x) montitor new thermos / set target temps
+-A (x) formatting
+-A ( ) rules => nodes
+-A ( ) regular get all
+-A ( ) turn off heat controller (write NaN to all thermos)
+
+
+Erweiterungen:
+( ) nuki gateway
+( ) audio
