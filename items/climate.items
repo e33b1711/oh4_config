@@ -1,5 +1,6 @@
-Group climate              
+Group climate
 Group temperature                           (climate)
+Group target_temp                           (climate)
 Group humidity                              (climate)
 Group heat_setpoint                         (climate)
 Group setpoint_default                      (climate)
@@ -58,17 +59,31 @@ Number V_OG_GA      "Ist-Stellwert Gang OG [%.1f]"          <heating>           
 Number V_OG_BA      "Ist-Stellwert Badezimmer [%.1f]"       <heating>           (temperature, OG_BA)           { channel="mqtt:topic:mosquitto:arduino_climate:V_OG_BA"     ,    autoupdate="false"}
 Number V_OG_SZ      "Ist-Stellwert Schlafzimmer [%.1f]"     <heating>           (temperature, OG_SZ)           { channel="mqtt:topic:mosquitto:arduino_climate:V_OG_SZ"     ,    autoupdate="false"}
 
-Number TS_EG_WZ     "Soll-Temp. Wohnzimmer [%.1f °C]"       <temperature>       (temperature, EG_WZ)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_EG_WZ"     ,    autoupdate="false"}
-Number TS_EG_KU     "Soll-Temp. Küche [%.1f °C]"            <temperature>       (temperature, EG_KU)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_EG_KU"     ,    autoupdate="false"}
-Number TS_EG_EZ     "Soll-Temp. Esszimmer [%.1f °C]"        <temperature>       (temperature, EG_EZ)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_EG_EZ"     ,    autoupdate="false"}
-Number TS_EG_GA     "Soll-Temp. Gang EG [%.1f °C]"          <temperature>       (temperature, EG_GA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_EG_GA"     ,    autoupdate="false"}
-Number TS_OG_BA     "Soll-Temp. Badezimmer [%.1f °C]"       <temperature>       (temperature, OG_BA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_BA"     ,    autoupdate="false"}
-Number TS_OG_KN     "Soll-Temp. Leos Zimmer [%.1f °C]"      <temperature>       (temperature, OG_KN)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_KN"     ,    autoupdate="false"}
-Number TS_OG_KS     "Soll-Temp. Kurbis Zimmer [%.1f °C]"    <temperature>       (temperature, OG_KS)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_KS"     ,    autoupdate="false"}
-Number TS_OG_SZ     "Soll-Temp. Schlafzimmer [%.1f °C]"     <temperature>       (temperature, OG_SZ)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_SZ"     ,    autoupdate="false"}
-Number TS_OG_GA     "Soll-Temp. Gang OG [%.1f °C]"          <temperature>       (temperature, OG_GA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_GA"     ,    autoupdate="false"}
-Number TS_UG_HO     "Soll-Temp. Hobby [%.1f °C]"            <temperature>       (temperature, UG_HO)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_UG_HO"     ,    autoupdate="false"}
-Number TS_UG_WK     "Soll-Temp. Waschküche [%.1f °C]"       <temperature>       (temperature, UG_WK)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_UG_WK"     ,    autoupdate="false"}
-Number TS_UG_GA     "Soll-Temp. Gang UG [%.1f °C]"          <temperature>       (temperature, UG_GA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_UG_GA"     ,    autoupdate="false"}
-Number TS_UG_LA     "Soll-Temp. Lager [%.1f °C]"            <temperature>       (temperature, UG_LA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_UG_LA"     ,    autoupdate="false"}
-                                                                                                   
+Number TS_EG_WZ     "Soll-Temp. Wohnzimmer [%.1f °C]"       <temperature>       (target_temp, EG_WZ)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_EG_WZ"     ,    autoupdate="false"}
+Number TS_EG_KU     "Soll-Temp. Küche [%.1f °C]"            <temperature>       (target_temp, EG_KU)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_EG_KU"     ,    autoupdate="false"}
+Number TS_EG_EZ     "Soll-Temp. Esszimmer [%.1f °C]"        <temperature>       (target_temp, EG_EZ)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_EG_EZ"     ,    autoupdate="false"}
+Number TS_EG_GA     "Soll-Temp. Gang EG [%.1f °C]"          <temperature>       (target_temp, EG_GA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_EG_GA"     ,    autoupdate="false"}
+Number TS_OG_BA     "Soll-Temp. Badezimmer [%.1f °C]"       <temperature>       (target_temp, OG_BA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_BA"     ,    autoupdate="false"}
+Number TS_OG_KN     "Soll-Temp. Leos Zimmer [%.1f °C]"      <temperature>       (target_temp, OG_KN)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_KN"     ,    autoupdate="false"}
+Number TS_OG_KS     "Soll-Temp. Kurbis Zimmer [%.1f °C]"    <temperature>       (target_temp, OG_KS)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_KS"     ,    autoupdate="false"}
+Number TS_OG_SZ     "Soll-Temp. Schlafzimmer [%.1f °C]"     <temperature>       (target_temp, OG_SZ)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_SZ"     ,    autoupdate="false"}
+Number TS_OG_GA     "Soll-Temp. Gang OG [%.1f °C]"          <temperature>       (target_temp, OG_GA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_OG_GA"     ,    autoupdate="false"}
+Number TS_UG_HO     "Soll-Temp. Hobby [%.1f °C]"            <temperature>       (target_temp, UG_HO)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_UG_HO"     ,    autoupdate="false"}
+Number TS_UG_WK     "Soll-Temp. Waschküche [%.1f °C]"       <temperature>       (target_temp, UG_WK)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_UG_WK"     ,    autoupdate="false"}
+Number TS_UG_GA     "Soll-Temp. Gang UG [%.1f °C]"          <temperature>       (target_temp, UG_GA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_UG_GA"     ,    autoupdate="false"}
+Number TS_UG_LA     "Soll-Temp. Lager [%.1f °C]"            <temperature>       (target_temp, UG_LA)          ["Control", "Temperature"] {listWidget="oh-stepper-item"[min=15, max=25, step=1],  channel="mqtt:topic:mosquitto:arduino_climate:TS_UG_LA"     ,    autoupdate="false"}
+
+
+Number TS_EG_WZ_backup     (target_temp_backup, EG_WZ)
+Number TS_EG_KU_backup     (target_temp_backup, EG_KU)
+Number TS_EG_EZ_backup     (target_temp_backup, EG_EZ)
+Number TS_EG_GA_backup     (target_temp_backup, EG_GA)
+Number TS_OG_BA_backup     (target_temp_backup, OG_BA)
+Number TS_OG_KN_backup     (target_temp_backup, OG_KN)
+Number TS_OG_KS_backup     (target_temp_backup, OG_KS)
+Number TS_OG_SZ_backup     (target_temp_backup, OG_SZ)
+Number TS_OG_GA_backup     (target_temp_backup, OG_GA)
+Number TS_UG_HO_backup     (target_temp_backup, UG_HO)
+Number TS_UG_WK_backup     (target_temp_backup, UG_WK)
+Number TS_UG_GA_backup     (target_temp_backup, UG_GA)
+Number TS_UG_LA_backup     (target_temp_backup, UG_LA)
