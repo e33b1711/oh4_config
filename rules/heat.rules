@@ -5,21 +5,21 @@ rule heat_control_off_store
 when
     Item heat_control received update OFF
 then
-    thermos_enable.members.forEach [ item |
+    target_temp.members.forEach [ item |
     val String item_name = item.name
         val backup_item  = ScriptServiceUtil.getItemRegistry.getItem(item_name + "_backup") as GenericItem
         var Number value = item.state as DecimalType
         backup_item.postUpdate(value)
-        item.sendCommand(OFF)
+        item.sendCommand(-10)
     ]
 end
 
 
 rule heat_control_on_restore
 when
-    Item heat_control received update OFF
+    Item heat_control received update ON
 then
-    thermos_enable.members.forEach [ item |
+    target_temp.members.forEach [ item |
         val String item_name = item.name
         val backup_item  = ScriptServiceUtil.getItemRegistry.getItem(item_name + "_backup") as GenericItem
         var Number backup_value = backup_item.state as DecimalType
