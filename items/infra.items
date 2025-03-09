@@ -1,0 +1,12 @@
+Group INFRA             (All)     ["Site Controller"]
+
+String  revision_og_west         "Revision OG West [%S]"       (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_og_west",       autoupdate="false", expire="10m, state=expired" } 
+String  revision_og_ost          "Revision OG Ost [%S]"        (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_og_ost",        autoupdate="false", expire="10m, state=expired" } 
+String  revision_eg_west         "Revision EG West [%S]"       (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_eg_west",       autoupdate="false", expire="10m, state=expired" } 
+String  revision_eg_ost          "Revision EG Ost [%S]"        (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_eg_ost",        autoupdate="false", expire="10m, state=expired" } 
+String  revision_ug              "Revision UG [%S]"            (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_ug",            autoupdate="false", expire="10m, state=expired" } 
+String  revision_power           "Revision Power [%S]"         (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_power",         autoupdate="false", expire="10m, state=expired" } 
+String  revision_ch              "Revision Chicken [%S]"       (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_ch",            autoupdate="false", expire="10m, state=expired" } 
+String  revision_garage          "Revision Garage [%S]"        (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_garage",        autoupdate="false", expire="10m, state=expired" } 
+String  revision_power_service   "Revision Power Service [%S]" (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_power_service", autoupdate="false", expire="10m, state=expired" } 
+String  revision_relay_service   "Revision Relay Service [%S]" (INFRA) { channel="mqtt:topic:mosquitto:node_info:revision_rleay_service", autoupdate="false", expire="10m, state=expired" } 
