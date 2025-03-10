@@ -6,8 +6,8 @@ A (x) formatting
 A (x) rules => nodes
 A ( ) regular get all
 A (x) turn off heat controller (write NaN to all thermos)
-A ( ) nodes hard beat ( expire="10m, command=UNDEF"  + notification rule)
-A ( ) power / relay sercive hard beat
+A (x) nodes hard beat ( expire="10m, command=UNDEF"  + notification rule)
+A (x) power / relay sercive hard beat
 
 
 Erweiterungen:
