@@ -38,7 +38,6 @@ Switch LI_EG_AW         "Terrasse Westen"        <light>  (Lights, house)       
 Switch LI_EG_AO         "Wand Osten"             <light>  (Lights, house, SunsetLights)    ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_EG_AO",    autoupdate="false"}
 Switch LI_GR            "Grundbeleuchtung"       <light>  (Lights, GR)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_GR",       autoupdate="false"}
 Switch LI_GR_L1         "Aussen"                 <light>  (Lights, GR)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_GR_L1",    autoupdate="false"}
-Switch LI_GR_L2         "Aussen Zustatz"         <light>  (Lights, GR)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_GR_L2",    autoupdate="false"}
 Switch ZE_GR_0          "Timer Innen 10 min"     <light>  (GR)                             ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_0",     autoupdate="false"}
 Switch ZE_GR_1          "Timer Innen 2 min"      <light>  (GR)                             ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_1",     autoupdate="false"}
 Switch ZE_GR_2          "Timer Außen"            <light>  (GR)                             ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_2",     autoupdate="false"}

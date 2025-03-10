@@ -65,7 +65,6 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="192.168.178.52", port=18
         Type switch : LI_EG_AO      "LI_EG_AO"       [ stateTopic="ard_state/LI_EG_AO"     ,commandTopic="ard_command/LI_EG_AO"     , on="1", off="0"  ]
         Type switch : LI_GR 	    "LI_GR"          [ stateTopic="ard_state/LI_GR"        ,commandTopic="ard_command/LI_GR"        , on="1", off="0"  ]
         Type switch : LI_GR_L1      "LI_GR_L1"       [ stateTopic="ard_state/LI_GR_L1"     ,commandTopic="ard_command/LI_GR_L1"     , on="1", off="0"  ]
-        Type switch : LI_GR_L2      "LI_GR_L2"       [ stateTopic="ard_state/LI_GR_L2"     ,commandTopic="ard_command/LI_GR_L2"     , on="1", off="0"  ]
         Type switch : ZE_GR_0	    "ZE_GR_0"        [ stateTopic="ard_state/ZE_GR_0"      ,commandTopic="ard_command/ZE_GR_0"      , on="1", off="0"  ]
         Type switch : ZE_GR_1	    "ZE_GR_1"        [ stateTopic="ard_state/ZE_GR_1"      ,commandTopic="ard_command/ZE_GR_1"      , on="1", off="0"  ]
         Type switch : ZE_GR_2	    "ZE_GR_2"        [ stateTopic="ard_state/ZE_GR_2"      ,commandTopic="ard_command/ZE_GR_2"      , on="1", off="0"  ]
