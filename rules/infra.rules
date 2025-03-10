@@ -1,25 +1,3 @@
-rule "chicken_up"
-when
-        Channel 'astro:sun:chicken:rise#event' triggered START
-then
-        sendCommand(DO_CH, UP)
-        sendNotification("e33b1711@gmail.com", "chicken up")
-end
-
-rule "chicken_down"
-when
-        Channel 'astro:sun:chicken:set#event' triggered START
-then
-        sendCommand(DO_CH, DOWN)
-        sendNotification("e33b1711@gmail.com", "chicken down")
-end
-
-
-
-
-
-
-
 rule InfraNotification
 when
      Member of INFRA changed to "expired"
