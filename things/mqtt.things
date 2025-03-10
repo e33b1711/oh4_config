@@ -164,7 +164,7 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
         Type rollershutter: DO_CH	 	"DO_CH"	     [ stateTopic="ard_state/DO_CH"	   , commandTopic="ard_command/DO_CH"	 ]        
     }  
 
-    Thing topic node_info "Node Info" @ "debug" {
+    Thing topic infra "infra" @ "debug" {
     Channels:    
         Type string: revision_og_west	    "revision_og_west"       [ stateTopic="ard_state/og_west"         ]     
         Type string: revision_og_ost 	    "revision_og_ost"        [ stateTopic="ard_state/og_ost"          ]   
