@@ -8,6 +8,7 @@ A ( ) regular get all
 A (x) turn off heat controller (write NaN to all thermos)
 A (x) nodes hard beat ( expire="10m, command=UNDEF"  + notification rule)
 A (x) power / relay sercive hard beat
+A ( ) chron time offset
 
 
 Erweiterungen:
