@@ -166,16 +166,17 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
 
     Thing topic infra "infra" @ "debug" {
     Channels:    
-        Type string: revision_og_west	    "revision_og_west"       [ stateTopic="ard_state/og_west"         ]     
-        Type string: revision_og_ost 	    "revision_og_ost"        [ stateTopic="ard_state/og_ost"          ]   
-        Type string: revision_eg_west	    "revision_eg_west"       [ stateTopic="ard_state/eg_west"         ]   
-        Type string: revision_eg_ost 	    "revision_eg_ost"        [ stateTopic="ard_state/eg_ost"          ]    
-        Type string: revision_ug     	    "revision_ug"            [ stateTopic="ard_state/ug"              ]  
-        Type string: revision_power  	    "revision_power"         [ stateTopic="ard_state/power"           ]   
-        Type string: revision_ch     	    "revision_ch"            [ stateTopic="ard_state/ch"              ] 
-        Type string: revision_garage 	    "revision_garage"        [ stateTopic="ard_state/gr"              ]      
-        Type string: revision_power_service "revision_power_service" [ stateTopic="power_state/power_service" ] 
-        Type string: revision_relay_service "revision_relay_service" [ stateTopic="ard_state/relay_service"   ]         
+        Type string: revision_og_west	     "revision_og_west"         [ stateTopic="ard_state/og_west"                   ]     
+        Type string: revision_og_ost 	     "revision_og_ost"          [ stateTopic="ard_state/og_ost"                    ]   
+        Type string: revision_eg_west	     "revision_eg_west"         [ stateTopic="ard_state/eg_west"                   ]   
+        Type string: revision_eg_ost 	     "revision_eg_ost"          [ stateTopic="ard_state/eg_ost"                    ]    
+        Type string: revision_ug     	     "revision_ug"              [ stateTopic="ard_state/ug"                        ]  
+        Type string: revision_power  	     "revision_power"           [ stateTopic="ard_state/power"                     ]   
+        Type string: revision_ch     	     "revision_ch"              [ stateTopic="ard_state/ch"                        ] 
+        Type string: revision_garage 	     "revision_garage"          [ stateTopic="ard_state/gr"                        ]      
+        Type string: revision_power_service  "revision_power_service"   [ stateTopic="power_state/power_service"           ] 
+        Type string: revision_relay_service  "revision_relay_service"   [ stateTopic="ard_state/relay_service"             ] 
+        Type string: revision_bridge_service "revision_bridge_service"  [ stateTopic="ard_state/revision_bridge_service"   ]         
     }                                                                                                                                                                           	  
 }
 
