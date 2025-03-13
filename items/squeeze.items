@@ -1,0 +1,87 @@
+String          SqueezeFavorites                 "Favorite List [%s]"                      (Squeeze) {channel="squeezebox:squeezeboxserver:832671a5ca:favoritesList"}
+
+String          SqueezePlayer                    "Squeezeplayer"                           (Squeeze)
+
+Player          SqueezeBadControl                "Livingroom"                              (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:control" }
+Dimmer          SqueezeBadVolume                 "Volume [%s]"                             (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:volume" }
+Number:Time     SqueezeBadCurrPlaytime           "Playing Time [JS(mmss.js):%s]"           (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:currentPlayingTime" }
+Number          SqueezeBadPlaylistIndex          "Playlist Index"                          (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:playListIndex" }
+Number:Time     SqueezeBadDuration               "Duration [JS(mmss.js):%s]"               (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:duration" }
+Number          SqueezeBadSleep                  "Sleeptimer [%.0f]"                       (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:sleep" }
+Number          SqueezeBadShuffle                "Shuffle Mode"                            (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:currentPlaylistShuffle" }
+Number          SqueezeBadRepeat                 "Repeat Mode"                             (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:currentPlaylistRepeat" }
+String          SqueezeBadRemoteTitle            "Remote Title"                            (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:remotetitle" }
+String          SqueezeBadTitle                  ""                                <none>  (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:title" }
+String          SqueezeBadAlbum                  ""                                <none>  (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:album" }
+String          SqueezeBadArtist                 ""                                <none>  (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:artist" }
+String          SqueezeBadGenre                  ""                                <none>  (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:genre" }
+String          SqueezeBadYear                   ""                                <none>  (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:year" }
+String          SqueezeBadPlaylistTracks         ""                                <none>  (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:numberPlaylistTracks" }
+Image           SqueezeBadCover                  "Cover Art[%s]"                           (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:coverartdata" }
+String          SqueezeBadPlayFavorite           "Play Favorites [%s]"                     (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:playFavorite" }
+String          SqueezeBadStreamURL              "Stream URL"                              (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:stream" }
+String          SqueezeBadSyncPlayer             "Sync Player"                             (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:sync" }
+String          SqueezeBadUnsyncPlayer           "Unsync Player"                           (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:unsync" }
+Switch          SqueezeBadPower                  "Power"                                   (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:power" }
+Switch          SqueezeBadMute                   "Mute"                                    (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:mute" }
+Switch          SqueezeBadStop                   "Stop"                                    (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:stop" }
+Switch          SqueezeBadPlaypause              "Play/Pause"                              (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:playPause" }
+Switch          SqueezeBadNext                   "Next"                                    (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:next" }
+Switch          SqueezeBadPrevious               "Previous"                                (squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202a55b9:prev" }
+
+Player          SqueezeWCControl                 "Livingroom"                              (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:control" }
+Dimmer          SqueezeWCVolume                  "Volume [%s]"                             (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:volume" }
+Number:Time     SqueezeWCCurrPlaytime            "Playing Time [JS(mmss.js):%s]"           (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:currentPlayingTime" }
+Number          SqueezeWCPlaylistIndex           "Playlist Index"                          (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:playListIndex" }
+Number:Time     SqueezeWCDuration                "Duration [JS(mmss.js):%s]"               (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:duration" }
+Number          SqueezeWCSleep                   "Sleeptimer [%.0f]"                       (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:sleep" }
+Number          SqueezeWCShuffle                 "Shuffle Mode"                            (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:currentPlaylistShuffle" }
+Number          SqueezeWCRepeat                  "Repeat Mode"                             (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:currentPlaylistRepeat" }
+String          SqueezeWCRemoteTitle             "Remote Title"                            (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:remotetitle" }
+String          SqueezeWCTitle                   ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:title" }
+String          SqueezeWCAlbum                   ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:album" }
+String          SqueezeWCArtist                  ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:artist" }
+String          SqueezeWCGenre                   ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:genre" }
+String          SqueezeWCYear                    ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:year" }
+String          SqueezeWCPlaylistTracks          ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:numberPlaylistTracks" }
+Image           SqueezeWCCover                   "Cover Art[%s]"                           (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:coverartdata" }
+String          SqueezeWCPlayFavorite            "Play Favorites [%s]"                     (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:playFavorite" }
+String          SqueezeWCStreamURL               "Stream URL"                              (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:stream" }
+String          SqueezeWCSyncPlayer              "Sync Player"                             (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:sync" }
+String          SqueezeWCUnsyncPlayer            "Unsync Player"                           (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:unsync" }
+Switch          SqueezeWCPower                   "Power"                                   (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:power" }
+Switch          SqueezeWCMute                    "Mute"                                    (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:mute" }
+Switch          SqueezeWCStop                    "Stop"                                    (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:stop" }
+Switch          SqueezeWCPlaypause               "Play/Pause"                              (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:playPause" }
+Switch          SqueezeWCNext                    "Next"                                    (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:next" }
+Switch          SqueezeWCPrevious                "Previous"                                (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202e2439:prev" }
+
+
+Player          SqueezeOGControl                 "Livingroom"                              (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:control" }
+Dimmer          SqueezeOGVolume                  "Volume [%s]"                             (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:volume" }
+Number:Time     SqueezeOGCurrPlaytime            "Playing Time [JS(mmss.js):%s]"           (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:currentPlayingTime" }
+Number          SqueezeOGPlaylistIndex           "Playlist Index"                          (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:playListIndex" }
+Number:Time     SqueezeOGDuration                "Duration [JS(mmss.js):%s]"               (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:duration" }
+Number          SqueezeOGSleep                   "Sleeptimer [%.0f]"                       (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:sleep" }
+Number          SqueezeOGShuffle                 "Shuffle Mode"                            (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:currentPlaylistShuffle" }
+Number          SqueezeOGRepeat                  "Repeat Mode"                             (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:currentPlaylistRepeat" }
+String          SqueezeOGRemoteTitle             "Remote Title"                            (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:remotetitle" }
+String          SqueezeOGTitle                   ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:title" }
+String          SqueezeOGAlbum                   ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:album" }
+String          SqueezeOGArtist                  ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:artist" }
+String          SqueezeOGGenre                   ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:genre" }
+String          SqueezeOGYear                    ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:year" }
+String          SqueezeOGPlaylistTracks          ""                                <none>  (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:numberPlaylistTracks" }
+Image           SqueezeOGCover                   "Cover Art[%s]"                           (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:coverartdata" }
+String          SqueezeOGPlayFavorite            "Play Favorites [%s]"                     (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:playFavorite" }
+String          SqueezeOGStreamURL               "Stream URL"                              (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:stream" }
+String          SqueezeOGSyncPlayer              "Sync Player"                             (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:sync" }
+String          SqueezeOGUnsyncPlayer            "Unsync Player"                           (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:unsync" }
+Switch          SqueezeOGPower                   "Power"                                   (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:power" }
+Switch          SqueezeOGMute                    "Mute"                                    (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:mute" }
+Switch          SqueezeOGStop                    "Stop"                                    (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:stop" }
+Switch          SqueezeOGPlaypause               "Play/Pause"                              (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:playPause" }
+Switch          SqueezeOGNext                    "Next"                                    (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:next" }
+Switch          SqueezeOGPrevious                "Previous"                                (Squeeze)  { channel="squeezebox:squeezeboxplayer:832671a5ca:0004202ad5af:prev" }
+
+
