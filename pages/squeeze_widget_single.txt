@@ -1,0 +1,259 @@
+uid: SqueezeControl2
+tags:
+  - card
+  - marketplace:123932
+props:
+  parameters:
+    - default: Squeeze
+      description: Title for the widget
+      label: Static Widget Title
+      name: title
+      required: false
+      type: TEXT
+    - default: SqueezeBad
+      description: Item for Playerselection
+      label: Player Selector Item
+      name: selected
+      required: true
+      type: TEXT
+    - context: item
+      defaultValue: SqueezeServerListFavorite
+      description: Item for Serverlist
+      label: Serverlist Item
+      name: favoriteslist
+      required: true
+      type: TEXT
+    - default: Cover
+      description: Suffix for CoverArt
+      label: CoverArt Suffix
+      name: coverart
+      required: true
+      type: TEXT
+    - default: Artist
+      description: Suffix for Artist
+      label: Artist Suffix
+      name: artist
+      required: true
+      type: TEXT
+    - default: Album
+      description: Suffix for Album
+      label: Album Suffix
+      name: album
+      required: true
+      type: TEXT
+    - default: Title
+      description: Suffix for Title
+      label: Title Suffix
+      name: title
+      required: true
+      type: TEXT
+    - default: Duration
+      description: Suffix for Duration
+      label: Duration Suffix
+      name: duration
+      required: true
+      type: TEXT
+    - default: Control
+      description: Suffix for Player Control
+      label: Control Suffix
+      name: control
+      required: true
+      type: TEXT
+    - default: Volume
+      description: Suffix for Volume
+      label: Volume Suffix
+      name: volume
+      required: true
+      type: TEXT
+    - default: Shuffle
+      description: Suffix for Shuffle
+      label: Shuffle Suffix
+      name: shuffle
+      required: true
+      type: TEXT
+    - default: Repeat
+      description: Suffix for Repeat
+      label: Repeat Suffix
+      name: repeat
+      required: true
+      type: TEXT
+    - default: Sleep
+      description: Suffix for Sleepmode
+      label: Sleepmode Suffix
+      name: sleepmode
+      required: true
+      type: TEXT
+    - default: Power
+      description: Suffix for Power
+      label: Power Suffix
+      name: power
+      required: true
+      type: TEXT
+    - default: PlayFavorite
+      description: Suffix for Favorites
+      label: Favorites Suffix
+      name: favorites
+      required: true
+      type: TEXT
+  parameterGroups: []
+timestamp: Mar 13, 2025, 2:08:28 PM
+component: f7-card
+config: {}
+slots:
+  default:
+    - component: f7-row
+      slots:
+        default:
+          - component: f7-col
+            slots:
+              default:
+                - component: f7-card
+                  config:
+                    title: = props.selected
+    - component: f7-row
+      slots:
+        default:
+          - component: oh-image
+            config:
+              item: =props.selected+props.coverart
+              style:
+                height: auto
+                width: 100%
+    - component: f7-row
+      config:
+        class:
+          - justify-content-left
+      slots:
+        default:
+          - component: f7-col
+            slots:
+              default:
+                - component: Label
+                  config:
+                    class:
+                      - text-align-right
+                      - margin-top
+                      - margin-right
+                    text: =items[props.selected+props.artist].state
+    - component: f7-row
+      config:
+        class:
+          - justify-content-left
+      slots:
+        default:
+          - component: f7-col
+            slots:
+              default:
+                - component: Label
+                  config:
+                    class:
+                      - text-align-right
+                      - margin-right
+                    text: =items[props.selected+props.title].state
+    - component: f7-row
+      config:
+        class:
+          - justify-content-left
+      slots:
+        default:
+          - component: f7-col
+            slots:
+              default:
+                - component: Label
+                  config:
+                    class:
+                      - text-align-right
+                      - margin-right
+                    text: =items[props.selected+props.album].state
+    - component: f7-row
+      config:
+        class:
+          - justify-content-left
+      slots:
+        default:
+          - component: f7-col
+            slots:
+              default:
+                - component: Label
+                  config:
+                    class:
+                      - text-align-right
+                      - margin-right
+                    text: =Math.trunc(Number(items[props.selected+props.duration].state.replace('
+                      s',''))/60) + ":" +
+                      (Number(items[props.selected+props.duration].state.replace('
+                      s','')) % 60).toString().padStart(2,'0')
+    - component: f7-row
+      config:
+        class:
+          - padding-top
+          - padding-bottom
+      slots:
+        default:
+          - component: f7-col
+            slots:
+              default:
+                - component: oh-player-controls
+                  config:
+                    item: =props.selected+props.control
+    - component: f7-row
+      config:
+        class:
+          - padding-top
+          - padding-bottom
+      slots:
+        default:
+          - component: f7-col
+            slots:
+              default:
+                - component: oh-slider
+                  config:
+                    item: =props.selected+props.volume
+                    label: Volume
+                    max: 100
+                    min: 0
+                    step: 2
+                    unit: "%"
+    - component: f7-row
+      config:
+        class:
+          - padding-top
+          - padding-bottom
+        height: 30px
+    - component: f7-row
+      config:
+        class:
+          - padding-top
+          - padding-bottom
+      slots:
+        default:
+          - component: f7-col
+            slots:
+              default:
+                - component: oh-button
+                  config:
+                    action: command
+                    actionCommand: toggle
+                    actionFeedback: Power
+                    actionItem: =props.selected+props.power
+                    class:
+                      - margin-top
+                    bgColor: "=(items[props.selected+props.power].state === 'ON') ? 'green' : 'red'"
+                    fill: true
+                    iconF7: power
+                    text: POWER
+    - component: f7-row
+      slots:
+        default:
+          - component: f7-col
+            slots:
+              default:
+                - component: oh-label-card
+                  config:
+                    action: options
+                    actionFeedback: =items[props.selected+props.favorites].state
+                    actionItem: =props.selected+props.favorites
+                    actionOptions: =items[props.favoriteslist].state
+                    height: auto
+                    item: =props.selected+props.favorites
+                    width: 100%
