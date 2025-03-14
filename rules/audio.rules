@@ -1,0 +1,29 @@
+rule audio_bath_rule
+when
+    Item LI_OG_BA received update
+then
+    sendCommand(SqueezeBadPower, LI_OG_BA.state.toString)
+end
+
+rule audio_wc_rule
+when
+    Item LI_EG_WC received update
+then
+    sendCommand(SqueezeWCPower, LI_EG_WC.state.toString)
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
