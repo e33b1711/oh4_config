@@ -47,6 +47,3 @@ then
 		sendCommand(ZE_EG_VH, ON)
 	}
 end
-
-
-

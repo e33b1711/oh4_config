@@ -2,6 +2,5 @@ rule InfraNotification
 when
      Member of INFRA changed to "expired"
 then
-	 sendNotification("e33b1711@gmail.com", "Infrastructure thing expired: " + triggeringItem.name)
+	sendNotification("e33b1711@gmail.com", "Infrastructure thing expired: " + triggeringItem.name)
 end
-

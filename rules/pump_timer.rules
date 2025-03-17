@@ -3,33 +3,15 @@ import java.util.Map
 val Map<String, Timer> pumpTimers = newHashMap
 
 
-rule pumpTimer
+rule pump_timer
 when
     Member of PumpTimer changed from OFF to ON
 then
     if (pumpTimers.containsKey(triggeringItem.name)){
         pumpTimers.get(triggeringItem.name)?.cancel()
-        //logInfo("RulepumpTimer", "Canceled old timer for " + triggeringItem.name)
     }
     pumpTimers.put( triggeringItem.name, createTimer(now.plusSeconds(3000), [|
         triggeringItem.sendCommand(OFF)
         pumpTimers.put(triggeringItem.name, null) // remove the timer from the Hashmap
-        //logInfo("RulepumpTimer", "Destroyed timer for " + triggeringItem.name)
     ]))
-    //logInfo("RulepumpTimer", "Created timer for " + triggeringItem.name)
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

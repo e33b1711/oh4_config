@@ -1,5 +1,3 @@
-
-//cellar stair light = wall lights or cellar light
 rule cellar_stair_on
 when
     Item LI_UG_GA received update ON
@@ -7,12 +5,14 @@ then
     sendCommand(LI_UG_TR, ON)
 end
 
+
 rule wall_stair_on
 when
     Item LI_GA_L1 received update ON
 then
     sendCommand(LI_UG_TR, ON)
 end
+
 
 rule cellar_stair_off
 when
@@ -23,6 +23,7 @@ then
     }
 end
 
+
 rule wall_stair_off
 when
     Item LI_GA_L1 received update OFF
@@ -31,15 +32,3 @@ then
         sendCommand(LI_UG_TR, OFF)
     }
 end
-
-
-
-
-
-
-
-
-
-
-
-

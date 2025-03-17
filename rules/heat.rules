@@ -1,6 +1,7 @@
 import org.eclipse.smarthome.core.library.types.DecimalType
 import org.openhab.core.model.script.ScriptServiceUtil
 
+
 rule heat_control_off_store
 when
     Item heat_control received update OFF

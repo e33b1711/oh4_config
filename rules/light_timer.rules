@@ -4,31 +4,25 @@ val Map<String, Timer> lightTimers = newHashMap
 val Map<String, Timer> lightTimersAlways = newHashMap
 
 
-
 //timers that are always on
 
-rule RuleLightTimerAlways
+rule light_timer_always
 when
      Member of AlwaysTimer changed from OFF to ON
 then
     if (lightTimersAlways.containsKey(triggeringItem.name)){
         lightTimersAlways.get(triggeringItem.name)?.cancel()
-        //logInfo("RuleLightTimers", "Canceled old timer for " + triggeringItem.name)
     }
     lightTimersAlways.put( triggeringItem.name, createTimer(now.plusSeconds(600), [|
         triggeringItem.sendCommand(OFF)
-        lightTimersAlways.put(triggeringItem.name, null) // remove the timer from the Hashmap
-        //logInfo("RuleLightTimers", "Destroyed timer for " + triggeringItem.name)
+        lightTimersAlways.put(triggeringItem.name, null)
     ]))
-    //logInfo("RuleLightTimersAlways", "Created timer for " + triggeringItem.name)
 end
-
 
 
 //timers that are only active at night (and can be switched off with item nigt_timers)
 
-//set timer if light is turned on / kill old timer
-rule RuleLightTimer
+rule light_timer
 when
      Member of Lights changed from OFF to ON
 then
@@ -50,44 +44,43 @@ end
 
 
 //set timer for all lights that are on at 2300
-//kill old timers (should be unnecessary)
-rule RuleLightTimerOn
+
+rule light_timer_on
 when
    Time cron "0 0 23 * * ?"
 then
     if (night_timer.state==ON){ 
-        //logInfo("RuleLightTimersOn", "Setting all Timers...")
         Lights.members.forEach [ item |
             if (lightTimers.containsKey(item.name)){
                 lightTimers.get(item.name)?.cancel()
-                //logInfo("RuleLightTimersOn", "Canceled old timer for " + item.name)
             }
             if (item.state==ON){
                 lightTimers.put( item.name, createTimer(now.plusSeconds(600), [|
                     item.sendCommand(OFF)
-                    lightTimers.put(item.name, null) // remove the timer from the Hashmap
-                    //logInfo("RuleLightTimersOn", "Destroyed timer for " + item.name)
+                    lightTimers.put(item.name, null)
                 ]))
             }
         ]  
     }        
 end
 
+
 //kill all timers if night_timer(s) changed to OFF
-rule NightTimerOFF
+
+rule night_timer_off
 when
    Item night_timer changed from ON to OFF
 then
     Lights.members.forEach [ item |
         if (lightTimers.containsKey(item.name)){
             lightTimers.get(item.name)?.cancel()
-            //logInfo("RuleLightTimersOn", "Canceled old timer for " + item.name)
         }
     ]  
 end
 
+
 //set timer for all lights when night_timer is turned on
-//kill old timers (should be unnecessary)
+
 rule RuleLightTimerOn
 when
    Item night_timer changed from OFF to ON
@@ -97,13 +90,11 @@ then
         Lights.members.forEach [ item |
             if (lightTimers.containsKey(item.name)){
                 lightTimers.get(item.name)?.cancel()
-                //logInfo("RuleLightTimersOn", "Canceled old timer for " + item.name)
             }
             if (item.state==ON){
                 lightTimers.put( item.name, createTimer(now.plusSeconds(600), [|
                     item.sendCommand(OFF)
-                    lightTimers.put(item.name, null) // remove the timer from the Hashmap
-                    //logInfo("RuleLightTimersOn", "Destroyed timer for " + item.name)
+                    lightTimers.put(item.name, null)
                 ]))
             }
         ]  
@@ -111,10 +102,7 @@ then
 end
 
 
-
-
-
-rule SunsetLightsOn
+rule sunset_light_on
 when
 	Channel 'astro:sun:local:set#event' triggered START
 then
@@ -124,7 +112,7 @@ then
 end
 
 
-rule SunsetLightsOff
+rule sunset_light_off
 when
 	Time cron "0 0 22 * * ?"
 then
@@ -134,7 +122,7 @@ then
 end
 
 
-rule RuleChickenOuterLightsSet
+rule chicken_light_set
 when
    	Channel 'astro:sun:ChickenOuterLights:set#event' triggered START
 then
@@ -143,17 +131,16 @@ then
         item.sendCommand(ON)
 		if (lightTimers.containsKey(item.name)){
 		    lightTimers.get(item.name)?.cancel()
-		    //logInfo("RuleChickenOuterLights", "Canceled old timer for " + item.name)
 		}
 		lightTimers.put( item.name, createTimer(now.plusMinutes(240), [|
 		    item.sendCommand(OFF)
-		    lightTimers.put(item.name, null) // remove the timer from the Hashmap
-		    //logInfo("RuleChickenOuterLights", "Destroyed timer for " + item.name)
+		    lightTimers.put(item.name, null)
 		]))
 	]    	
 end
 
-rule RuleChickenOuterLightsRise
+
+rule chicken_light_rise
 when
    Channel 'astro:sun:ChickenOuterLights:rise#event' triggered START
 then
@@ -162,44 +149,10 @@ then
         item.sendCommand(ON)
 		if (lightTimers.containsKey(item.name)){
 		    lightTimers.get(item.name)?.cancel()
-		    //logInfo("RuleChickenOuterLights", "Canceled old timer for " + item.name)
 		}
 		lightTimers.put( item.name, createTimer(now.plusMinutes(180), [|
 		    item.sendCommand(OFF)
-		    lightTimers.put(item.name, null) // remove the timer from the Hashmap
-		    //logInfo("RuleChickenOuterLights", "Destroyed timer for " + item.name)
+		    lightTimers.put(item.name, null)
 		]))
 	]    	
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
