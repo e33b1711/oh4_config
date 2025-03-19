@@ -1,0 +1,11 @@
+0=Off
+2=Fault
+3=Bulk
+4=Absorption
+5=Float
+6=Storage
+7=Equalize (manual)
+11=Power supply mode
+246=Repeated absorption
+247=Auto equalize/Recondition
+248=BatterySafe

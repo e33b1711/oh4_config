@@ -1,0 +1,17 @@
+Group Victron           "Victron"                                                   <energy>  (UG_HK)   ["Inverter"]
+Number VIC_AC_V_L1      "Victron Verbrauch L1 [%.1f W]"                                       (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_AC_V_L1" }
+Number VIC_AC_V_L2      "Victron Verbrauch L2 [%.1f W]"                                       (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_AC_V_L2" }
+Number VIC_AC_V_L3      "Victron Verbrauch L3 [%.1f W]"                                       (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_AC_V_L3" }
+Number VIC_AC_G_L1      "Victron Netz L1 [%.1f W]"                                            (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_AC_G_L1" }
+Number VIC_AC_G_L2      "Victron Netz L2 [%.1f W]"                                            (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_AC_G_L2" }
+Number VIC_AC_G_L3      "Victron Netz L3 [%.1f W]"                                            (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_AC_G_L3" }
+                      
+Number VIC_DC_Power     "Victron Battery Power [%.1f W]"                                      (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_DC_Power" }
+Number VIC_DC_Volt      "Victron Battery Volt [%.1f V]"                                       (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_DC_Volt" }
+                      
+Number VIC_Batt_Soc     "Victron Battery Soc [%.1f %%]"  <battery>                            (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_Batt_Soc" }
+Number VIC_Batt_Temp    "Victron Battery Temp [%.1f °C]" <temperatur>                         (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_Batt_Temp" }
+Number VIC_Batt_Stat    "Victron Battery Status [MAP(VictronChargerState.map):%s]"  <text>    (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_Batt_Stat" }
+Number VIC_Batt_Stat1   "Victron Status [MAP(VictronSystemState.map):%s]"                     (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_Batt_Stat1" }
+
+Number VIC_Sys_Stat     "Victron Status [MAP(VictronSystemState.map):%s]"                     (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:V_Sys_Stat" }

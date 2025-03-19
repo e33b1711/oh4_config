@@ -1,0 +1,20 @@
+Bridge mqtt:broker:venus [ host="192.168.178.144",port="1883", secure=false ]
+Thing mqtt:topic:multiplus "multiplus" (mqtt:broker:venus) {
+  Channels:
+    Type number : V_AC_V_L1 "Victron Verbrauch L1"     [ stateTopic="N/02818e05ac4a/system/0/Ac/Consumption/L1/Power", transformationPattern="JSONPATH:$.value"          ]
+    Type number : V_AC_V_L2 "Victron Verbrauch L2"     [ stateTopic="N/02818e05ac4a/system/0/Ac/Consumption/L2/Power", transformationPattern="JSONPATH:$.value"          ]
+    Type number : V_AC_V_L3 "Victron Verbrauch L3"     [ stateTopic="N/02818e05ac4a/system/0/Ac/Consumption/L3/Power", transformationPattern="JSONPATH:$.value"          ]
+    Type number : V_AC_G_L1 "Victron Netz L1"          [ stateTopic="N/02818e05ac4a/system/0/Ac/Grid/L1/Power",        transformationPattern="JSONPATH:$.value"          ]
+    Type number : V_AC_G_L2 "Victron Netz L2"          [ stateTopic="N/02818e05ac4a/system/0/Ac/Grid/L2/Power",        transformationPattern="JSONPATH:$.value"          ]
+    Type number : V_AC_G_L3 "Victron Netz L3"          [ stateTopic="N/02818e05ac4a/system/0/Ac/Grid/L3/Power",        transformationPattern="JSONPATH:$.value"          ]
+          
+    Type number : V_DC_Power "Victron DC Power"        [ stateTopic="N/02818e05ac4a/battery/512/Dc/0/Power",           transformationPattern="JSONPATH:$.value"          ]
+    Type number : V_DC_Volt "Victron DC Volt"          [ stateTopic="N/02818e05ac4a/battery/512/Dc/0/Voltage",         transformationPattern="JSONPATH:$.value"          ]
+              
+    Type number : V_Batt_Soc "Victron Batt Soc"        [ stateTopic="N/02818e05ac4a/system/0/Dc/Battery/Soc",          transformationPattern="JSONPATH:$.value"          ]
+    Type number : V_Batt_Temp "Victron Batt Temp"      [ stateTopic="N/02818e05ac4a/system/0/Dc/Battery/Temperature",  transformationPattern="JSONPATH:$.value"          ]
+    Type number : V_Batt_Stat "Victron Batt State"     [ stateTopic="N/02818e05ac4a/system/0/Dc/Battery/State",        transformationPattern="JSONPATH:$.value"          ]
+    Type number : V_Batt_Stat1 "Victron Batt Status1"  [ stateTopic="N/02818e05ac4a/system/0/Batteries",               transformationPattern="JSONPATH:$.value[0].state" ]
+    
+    Type number : V_Sys_Stat "Victron Sys Status"      [ stateTopic="N/02818e05ac4a/system/0/SystemState/State",       transformationPattern="JSONPATH:$.value"          ]
+}
