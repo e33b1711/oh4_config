@@ -16,6 +16,3 @@ A ( ) Wallbox integrieren (read only)
 A ( ) electric heating rule
 A ( ) power amp rule eval
 A ( ) Warning / Errors eval / fix
-
-Erweiterungen:
-( ) nuki gateway
