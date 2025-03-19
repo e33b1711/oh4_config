@@ -4,13 +4,18 @@ A (x) VD OG GA
 A (x) montitor new thermos / set target temps
 A (x) formatting
 A (x) rules => nodes
-A ( ) regular get all
 A (x) turn off heat controller (write NaN to all thermos)
 A (x) nodes hard beat ( expire="10m, command=UNDEF"  + notification rule)
 A (x) power / relay sercive hard beat
 A (x) chron time offset
 
 
+A ( ) regular get all
+A ( ) Victron fertig
+A ( ) Wallbox integrieren (read only)
+A ( ) electric heating rule
+A ( ) power amp rule eval
+A ( ) Warning / Errors eval / fix
+
 Erweiterungen:
 ( ) nuki gateway
-( ) audio
