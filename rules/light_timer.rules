@@ -81,7 +81,7 @@ end
 
 //set timer for all lights when night_timer is turned on
 
-rule RuleLightTimerOn
+rule night_timmer_on
 when
    Item night_timer changed from OFF to ON
 then
