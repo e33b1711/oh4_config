@@ -16,7 +16,7 @@ end
 
 rule audio_amp_on
 when
-    Item SqueezeOGPower changed to ON
+    Item SqueezeEZPower changed to ON
 then
     executeCommandLine(Duration.ofSeconds(1), "wget", "http://192.168.178.40/goform/formiPhoneAppPower.xml?1+PowerOn")
 end
@@ -24,7 +24,7 @@ end
 
 rule audio_amp_off
 when
-    Item SqueezeOGPower changed to OFF
+    Item SqueezeEZPower changed to OFF
 then
     executeCommandLine(Duration.ofSeconds(1), "wget", "http://192.168.178.40/goform/formiPhoneAppPower.xml?1+PowerStandby")
 end
