@@ -1,0 +1,23 @@
+rule infra_notifiaction
+when
+     Member of INFRA changed to "expired"
+then
+	sendNotification("e33b1711@gmail.com", "Lost contact to: " + triggeringItem.name)
+end
+
+
+rule infra_notifiaction
+when
+     Member of temperature changed to UNDEF
+then
+	sendNotification("e33b1711@gmail.com", "No updates on: " + triggeringItem.name)
+end
+
+
+rule infra_notifiaction
+when
+     Member of humidity changed to UNDEF
+then
+	sendNotification("e33b1711@gmail.com", "No updates on: " + triggeringItem.name)
+end
+	
