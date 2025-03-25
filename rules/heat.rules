@@ -27,3 +27,49 @@ then
         item.sendCommand(backup_value)
     ]
 end
+
+
+rule og_sz_heat
+when
+    Item DF_OG_SZ received update
+then
+    if (heat_control.state == ON){
+        if (DF_OG_SZ.state == 0){
+            TS_OG_SZ_backup.postUpdate(TS_OG_SZ.state as DecimalType)
+            TS_OG_SZ.sendCommand(-10)
+        }else{
+            TS_OG_SZ.sendCommand(TS_OG_SZ_backup.state as DecimalType)
+        }
+    }
+end
+
+
+rule og_kn_heat
+when
+    Item DF_OG_KN received update
+then
+    if (heat_control.state == ON){
+        logInfo("og_kn_heat", "A")
+        if (DF_OG_KN.state == 0){
+            TS_OG_KN_backup.postUpdate(TS_OG_KN.state as DecimalType)
+            TS_OG_KN.sendCommand(-10)
+        }else{
+            TS_OG_KN.sendCommand(TS_OG_KN_backup.state as DecimalType)  
+        }
+    }
+end
+
+
+rule og_ks_heat
+when
+    Item DF_OG_KS received update
+then
+    if (heat_control.state == ON){
+        if (DF_OG_KS.state == 0){
+            TS_OG_KS_backup.postUpdate(TS_OG_KS.state as DecimalType)
+            TS_OG_KS.sendCommand(-10)
+        }else{
+            TS_OG_KS.sendCommand(TS_OG_KS_backup.state as DecimalType)
+        }
+    }
+end
