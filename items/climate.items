@@ -7,7 +7,15 @@ Group setpoint_default                      (climate)
 
 Switch heat_control "Heizungsregelung"                      <heating>           (climate)
 
-Number TI_EG_WZ     "Temperatur Wohnzimmer [%.1f °C]"       <temperature>       (temperature, EG_WZ)             ["Temperature", "Measurement"] { channel="mqtt:topic:mosquitto:arduino_climate:TI_EG_WZ"    , autoupdate="false", expire="20m, state=UNDEF"}
+Group EL_HEAT        "Power Node"                           <energy>            (UG_HK)                          ["Inverter"]
+
+Number U_EL         "E-Heizung"                                                 (EL_HEAT)                        ["Energy"]                     { channel="mqtt:topic:mosquitto:arduino_climate:U_EL"        , autoupdate="false", expire="20m, state=UNDEF"}
+Number TI_PU_O      "Puffer oben [%.1f °C]"                                     (EL_HEAT)                        ["Energy"]                     { channel="mqtt:topic:mosquitto:arduino_climate:TI_PU_O"     , autoupdate="false", expire="20m, state=UNDEF"}
+Number TI_PU_U      "TPuffer unten [%.1f °C]"                                   (EL_HEAT)                        ["Energy"]                     { channel="mqtt:topic:mosquitto:arduino_climate:TI_PU_U"     , autoupdate="false", expire="20m, state=UNDEF"}
+Switch F_HE         "Gas Heizung"                                               (EL_HEAT)                        ["Energy"]                     { channel="mqtt:topic:mosquitto:arduino_climate:F_HE"        , autoupdate="false", expire="20m, state=UNDEF"}
+Switch F_WW         "Pumpensumpf Warnung"                                       (EL_HEAT)                        ["Energy"]                     { channel="mqtt:topic:mosquitto:arduino_climate:F_WW"        , autoupdate="false", expire="20m, state=UNDEF"}
+
+Number TI_EG_WZ     "Temperatur Wohnzimmer v"               <temperature>       (temperature, EG_WZ)             ["Temperature", "Measurement"] { channel="mqtt:topic:mosquitto:arduino_climate:TI_EG_WZ"    , autoupdate="false", expire="20m, state=UNDEF"}
 Number TI_EG_KU     "Temperatur Küche [%.1f °C]"            <temperature>       (temperature, EG_KU)             ["Temperature", "Measurement"] { channel="mqtt:topic:mosquitto:arduino_climate:TI_EG_KU"    , autoupdate="false", expire="20m, state=UNDEF"}
 Number TI_EG_EZ     "Temperatur Esszimmer [%.1f °C]"        <temperature>       (temperature, EG_EZ)             ["Temperature", "Measurement"] { channel="mqtt:topic:mosquitto:arduino_climate:TI_EG_EZ"    , autoupdate="false", expire="20m, state=UNDEF"}
 Number TI_EG_GA     "Temperatur Gang EG [%.1f °C]"          <temperature>       (temperature, EG_GA)             ["Temperature", "Measurement"] { channel="mqtt:topic:mosquitto:arduino_climate:TI_EG_GA"    , autoupdate="false", expire="20m, state=UNDEF"}

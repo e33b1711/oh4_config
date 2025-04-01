@@ -2,10 +2,6 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
 {
     Thing topic arduino_lights "Arduino Lights" @ "debug" {
     Channels: 
-        Type number : U_EL          "U_EL"           [ stateTopic="ard_state/U_EL"         , commandTopic="ard_command/U_EL"                           ]
-        Type number : TI_PU_O       "TI_PU_O"        [ stateTopic="ard_state/TI_PU_O"                                                                  ]
-        Type number : TI_PU_U       "TI_PU_O"        [ stateTopic="ard_state/TI_PU_U"                                                                  ]
-        Type number : F_HE          "Gas Heater"     [ stateTopic="ard_state/F_HE"                                                                     ]
         Type switch : LI_EG_WZ 	    "LI_EG_WZ" 	     [ stateTopic="ard_state/LI_EG_WZ" 	   ,commandTopic="ard_command/LI_EG_WZ" 	, on="1", off="0"  ]
         Type switch : LI_EG_WZ_L1 	"LI_EG_WZ_L1"    [ stateTopic="ard_state/LI_EG_WZ_L1"  ,commandTopic="ard_command/LI_EG_WZ_L1"  , on="1", off="0"  ]
         Type switch : LI_EG_WZ_L2 	"LI_EG_WZ_L2"    [ stateTopic="ard_state/LI_EG_WZ_L2"  ,commandTopic="ard_command/LI_EG_WZ_L2"  , on="1", off="0"  ]
@@ -55,6 +51,12 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
     
     Thing topic arduino_climate "Arduino Climate" @ "debug" {
     Channels:
+        Type number : U_EL          "U_EL"           [ stateTopic="ard_state/U_EL"         , commandTopic="ard_command/U_EL" ]
+        Type number : TI_PU_O       "TI_PU_O"        [ stateTopic="ard_state/TI_PU_O"                                        ]
+        Type number : TI_PU_U       "TI_PU_O"        [ stateTopic="ard_state/TI_PU_U"                                        ]
+        Type switch : F_HE          "Gas Heater"     [ stateTopic="ard_state/F_HE"                                           ]
+        Type switch : F_WW          "Water Warning"  [ stateTopic="ard_state/F_WW"                                           ]
+
         Type number: TI_EG_WZ       "TI_EG_WZ" [ stateTopic="ard_state/TI_EG_WZ" ]         
         Type number: TI_EG_KU       "TI_EG_KU" [ stateTopic="ard_state/TI_EG_KU" ]         
         Type number: TI_EG_EZ       "TI_EG_EZ" [ stateTopic="ard_state/TI_EG_EZ" ]         
