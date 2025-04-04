@@ -18,7 +18,7 @@ rule audio_amp_on
 when
     Item SqueezeEZPower changed to ON
 then
-    executeCommandLine(Duration.ofSeconds(2), "wget", "http://192.168.178.40/goform/formiPhoneAppPower.xml?1+PowerOn")
+    executeCommandLine(Duration.ofSeconds(2), "wget", "http://0005CD4D26E6.fritz.box/goform/formiPhoneAppPower.xml?1+PowerOn")
 end
 
 
@@ -26,5 +26,5 @@ rule audio_amp_off
 when
     Item SqueezeEZPower changed to OFF
 then
-    executeCommandLine(Duration.ofSeconds(2), "wget", "http://192.168.178.40/goform/formiPhoneAppPower.xml?1+PowerStandby")
+    executeCommandLine(Duration.ofSeconds(2), "wget", "http://0005CD4D26E6.fritz.box/goform/formiPhoneAppPower.xml?1+PowerStandby")
 end
