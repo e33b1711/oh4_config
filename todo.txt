@@ -10,9 +10,8 @@ A (x) power / relay sercive hard beat
 A (x) chron time offset
 
 
+A ( ) electric heating rule
 A ( ) regular get all
 A ( ) Victron fertig
 A ( ) Wallbox integrieren (read only)
-A ( ) electric heating rule
-A ( ) power amp rule eval
 A ( ) Warning / Errors eval / fix
