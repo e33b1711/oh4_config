@@ -20,7 +20,7 @@ rule notification_water
 when
     Item F_WW received update
 then
-    if ((F_WW.state as DecimalType) != 0){
+    if (F_WW.state != OFF){
         logInfo("notifications", "WW Sending notification via app.")
         sendNotification("e33b1711@gmail.com", "Wasserstand Pumpensumpf überprüfen!")
     }
