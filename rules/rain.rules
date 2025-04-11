@@ -1,0 +1,12 @@
+rule it_raining
+when
+	Item F_RAIN received update ON
+then
+	sendCommand(DF_OG_KN, 100)
+	sendCommand(DF_OG_KS, 100)
+	sendCommand(DF_OG_SZ, 100)
+	sendCommand(DF_OG_GA, 100)
+	sendCommand(RO_OG_KN, 100)
+	sendCommand(RO_OG_KS, 100)
+	sendCommand(RO_EG_WE, 100)
+end
