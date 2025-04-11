@@ -56,6 +56,7 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
         Type number : TI_PU_U       "TI_PU_O"        [ stateTopic="ard_state/TI_PU_U"                                                                  ]
         Type switch : F_HE          "Gas Heater"     [ stateTopic="ard_state/F_HE"                                                  , on="1", off="0"  ]
         Type switch : F_WW          "Water Warning"  [ stateTopic="ard_state/F_WW"                                                  , on="1", off="0"  ]
+        Type switch : F_RAIN        "Rain"           [ stateTopic="ard_state/F_RAIN"                                                , on="1", off="0"  ]
 
         Type number: TI_EG_WZ       "TI_EG_WZ" [ stateTopic="ard_state/TI_EG_WZ" ]         
         Type number: TI_EG_KU       "TI_EG_KU" [ stateTopic="ard_state/TI_EG_KU" ]         
