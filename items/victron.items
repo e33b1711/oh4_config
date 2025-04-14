@@ -1,63 +1,63 @@
 Group Victron           "Victron"                                                   <energy>  (UG_HK)   ["Inverter"]
 
-Number Vic_Evc_ProductId                         "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_ProductId"                      }
-Number Vic_Evc_FirmwareVersion                   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_FirmwareVersion"                }
-Number Vic_Evc_Serial                            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Serial"                         }
-Number Vic_Evc_Model                             "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Model"                          }
-Number Vic_Evc_MaxCurrent                        "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_MaxCurrent"                     }
-Number Vic_Evc_Mode                              "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Mode"                           }
-Number Vic_Evc_Ac_Energy_Forward                 "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_Energy_Forward"              }
-Number Vic_Evc_Ac_L1_Power                       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L1_Power"                    }
-Number Vic_Evc_Ac_L2_Power                       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L2_Power"                    }
-Number Vic_Evc_Ac_L3_Power                       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L3_Power"                    }
-Number Vic_Evc_Ac_Power                          "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_Power"                      }
-Number Vic_Evc_ChargingTime                      "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_ChargingTime"                   }
-Number Vic_Evc_Current                           "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Current"                        }
-Number Vic_Evc_Status                            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Status"                         }
-Number Vic_Evc_SetCurrent                        "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_SetCurrent"                     }
-Number Vic_Evc_StartStop                         "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_StartStop"                      }
-Number Vic_Evc_Position                          "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Position"                       }
-Number Vic_Sys_Serial                            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Serial"                         }
-Number Vic_Sys_Relay_0_State                     "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Relay_0_State"                  }
-Number Vic_Sys_Relay_1_State                     "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Relay_1_State"                  }
+String Vic_Evc_ProductId                         "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_ProductId"                      , expire="1m, state=UNDEF"}
+String Vic_Evc_FirmwareVersion                   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_FirmwareVersion"                , expire="1m, state=UNDEF"}
+String Vic_Evc_Serial                            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Serial"                         , expire="1m, state=UNDEF"}
+String Vic_Evc_Model                             "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Model"                          , expire="1m, state=UNDEF"}
+Number Vic_Evc_MaxCurrent                        "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_MaxCurrent"                     , expire="1m, state=UNDEF"}
+Number Vic_Evc_Mode                              "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Mode"                           , expire="1m, state=UNDEF"}
+Number Vic_Evc_Ac_Energy_Forward                 "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_Energy_Forward"              , expire="1m, state=UNDEF"}
+Number Vic_Evc_Ac_L1_Power                       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L1_Power"                    , expire="1m, state=UNDEF"}
+Number Vic_Evc_Ac_L2_Power                       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L2_Power"                    , expire="1m, state=UNDEF"}
+Number Vic_Evc_Ac_L3_Power                       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L3_Power"                    , expire="1m, state=UNDEF"}
+Number Vic_Evc_Ac_Power                          "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_Power"                       , expire="1m, state=UNDEF"}
+Number Vic_Evc_ChargingTime                      "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_ChargingTime"                   , expire="1m, state=UNDEF"}
+Number Vic_Evc_Current                           "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Current"                        , expire="1m, state=UNDEF"}
+Number Vic_Evc_Status                            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Status"                         , expire="1m, state=UNDEF"}
+Number Vic_Evc_SetCurrent                        "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_SetCurrent"                     , expire="1m, state=UNDEF"}
+Number Vic_Evc_StartStop                         "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_StartStop"                      , expire="1m, state=UNDEF"}
+Number Vic_Evc_Position                          "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Position"                       , expire="1m, state=UNDEF"}
 
-Number Vic_Sys_Ac_PvOnOutput_L1_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnOutput_L1_Power"         }
-Number Vic_Sys_Ac_PvOnOutput_L2_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnOutput_L2_Power"         }
-Number Vic_Sys_Ac_PvOnOutput_L3_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnOutput_L3_Power"         }
-Number Vic_Sys_Ac_PvOnGrid_L1_Power              "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGrid_L1_Power"           }
-Number Vic_Sys_Ac_PvOnGrid_L2_Power              "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGrid_L2_Power"           }
-Number Vic_Sys_Ac_PvOnGrid_L3_Power              "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGrid_L3_Power"           }
-Number Vic_Sys_Ac_PvOnGenset_L1_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGenset_L1_Power"         }
-Number Vic_Sys_Ac_PvOnGenset_L2_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGenset_L2_Power"         }
-Number Vic_Sys_Ac_PvOnGenset_L3_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGenset_L3_Power"         }
-Number Vic_Sys_Ac_Consumption_L1_Power           "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Consumption_L1_Power"        }
-Number Vic_Sys_Ac_Consumption_L2_Power           "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Consumption_L2_Power"        }
-Number Vic_Sys_Ac_Consumption_L3_Power           "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Consumption_L3_Power"        }
-Number Vic_Sys_Ac_Grid_L1_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Grid_L1_Power"               }
-Number Vic_Sys_Ac_Grid_L2_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Grid_L2_Power"               }
-Number Vic_Sys_Ac_Grid_L3_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Grid_L3_Power"               }
-Number Vic_Sys_Ac_Genset_L1_Power                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Genset_L1_Power"             }
-Number Vic_Sys_Ac_Genset_L2_Power                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Genset_L2_Power"             }
-Number Vic_Sys_Ac_Genset_L3_Power                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Genset_L3_Power"             }
-Number Vic_Sys_Ac_ActiveIn_Source                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ActiveIn_Source"             }
-Number Vic_Sys_Dc_Battery_Voltage                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_Voltage"             }
-Number Vic_Sys_Dc_Battery_Current                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_Current"             }
-Number Vic_Sys_Dc_Battery_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_Power"               }
-Number Vic_Sys_Dc_Battery_Soc                    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_Soc"                 }
-Number Vic_Sys_Dc_Battery_State                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_State"               }
-Number Vic_Sys_Dc_Battery_ConsumedAmphours       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_ConsumedAmphours"    }
-Number Vic_Sys_Dc_Battery_TimeToGo               "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_TimeToGo"            }
-Number Vic_Sys_Dc_Pv_Power                       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Pv_Power"                    }
-Number Vic_Sys_Dc_Pv_Current                     "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Pv_Current"                  }
-Number Vic_Sys_Dc_Charger_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Charger_Power"               }
-Number Vic_Sys_Dc_System_Power                   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_System_Power"                }
-Number Vic_Sys_Dc_Vebus_Current                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Vebus_Current"               }
-Number Vic_Sys_Dc_Vebus_Power                    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Vebus_Power"                 }
-Number Vic_Sys_Dc_InverterCharger_Current        "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_InverterCharger_Current"     }
-Number Vic_Sys_Dc_InverterCharger_Power          "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_InverterCharger_Power"       }
-Number Vic_Sys_Ac_ConsumptionOnInput_L1_Power    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnInput_L1_Power" }
-Number Vic_Sys_Ac_ConsumptionOnInput_L2_Power    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnInput_L2_Power" }
-Number Vic_Sys_Ac_ConsumptionOnInput_L3_Power    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnInput_L3_Power" }
-Number Vic_Sys_Ac_ConsumptionOnOutput_L1_Power   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnOutput_L1_Power"}
-Number Vic_Sys_Ac_ConsumptionOnOutput_L2_Power   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnOutput_L2_Power"}
-Number Vic_Sys_Ac_ConsumptionOnOutput_L3_Power   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnOutput_L3_Power"}
+String Vic_Sys_Serial                            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Serial"                         , expire="1m, state=UNDEF"}
+Number Vic_Sys_Relay_0_State                     "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Relay_0_State"                  , expire="1m, state=UNDEF"}
+Number Vic_Sys_Relay_1_State                     "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Relay_1_State"                  , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_PvOnOutput_L1_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnOutput_L1_Power"         , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_PvOnOutput_L2_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnOutput_L2_Power"         , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_PvOnOutput_L3_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnOutput_L3_Power"         , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_PvOnGrid_L1_Power              "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGrid_L1_Power"           , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_PvOnGrid_L2_Power              "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGrid_L2_Power"           , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_PvOnGrid_L3_Power              "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGrid_L3_Power"           , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_PvOnGenset_L1_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGenset_L1_Power"         , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_PvOnGenset_L2_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGenset_L2_Power"         , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_PvOnGenset_L3_Power            "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_PvOnGenset_L3_Power"         , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_Consumption_L1_Power           "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Consumption_L1_Power"        , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_Consumption_L2_Power           "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Consumption_L2_Power"        , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_Consumption_L3_Power           "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Consumption_L3_Power"        , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_Grid_L1_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Grid_L1_Power"               , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_Grid_L2_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Grid_L2_Power"               , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_Grid_L3_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Grid_L3_Power"               , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_Genset_L1_Power                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Genset_L1_Power"             , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_Genset_L2_Power                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Genset_L2_Power"             , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_Genset_L3_Power                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_Genset_L3_Power"             , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_ActiveIn_Source                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ActiveIn_Source"             , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Battery_Voltage                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_Voltage"             , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Battery_Current                "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_Current"             , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Battery_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_Power"               , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Battery_Soc                    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_Soc"                 , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Battery_State                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_State"               , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Battery_ConsumedAmphours       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_ConsumedAmphours"    , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Battery_TimeToGo               "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Battery_TimeToGo"            , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Pv_Power                       "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Pv_Power"                    , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Pv_Current                     "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Pv_Current"                  , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Charger_Power                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Charger_Power"               , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_System_Power                   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_System_Power"                , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Vebus_Current                  "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Vebus_Current"               , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_Vebus_Power                    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_Vebus_Power"                 , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_InverterCharger_Current        "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_InverterCharger_Current"     , expire="1m, state=UNDEF"}
+Number Vic_Sys_Dc_InverterCharger_Power          "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Dc_InverterCharger_Power"       , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_ConsumptionOnInput_L1_Power    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnInput_L1_Power" , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_ConsumptionOnInput_L2_Power    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnInput_L2_Power" , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_ConsumptionOnInput_L3_Power    "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnInput_L3_Power" , expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_ConsumptionOnOutput_L1_Power   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnOutput_L1_Power", expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_ConsumptionOnOutput_L2_Power   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnOutput_L2_Power", expire="1m, state=UNDEF"}
+Number Vic_Sys_Ac_ConsumptionOnOutput_L3_Power   "[%.1f]"               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Ac_ConsumptionOnOutput_L3_Power", expire="1m, state=UNDEF"}

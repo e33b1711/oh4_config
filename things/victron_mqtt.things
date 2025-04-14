@@ -2,10 +2,10 @@ Bridge mqtt:broker:venus [ host="192.168.178.144",port="1883", secure=false ]
 Thing mqtt:topic:multiplus "multiplus" (mqtt:broker:venus) {
   Channels:
 
-    Type number : Vic_Evc_ProductId                          [ stateTopic="N/02818e05ac4a/evcharger/40/ProductId"                   ,transformationPattern="JSONPATH:$.value"]    
-    Type number : Vic_Evc_FirmwareVersion                    [ stateTopic="N/02818e05ac4a/evcharger/40/FirmwareVersion"             ,transformationPattern="JSONPATH:$.value"]    
-    Type number : Vic_Evc_Serial                             [ stateTopic="N/02818e05ac4a/evcharger/40/Serial"                      ,transformationPattern="JSONPATH:$.value"]    
-    Type number : Vic_Evc_Model                              [ stateTopic="N/02818e05ac4a/evcharger/40/Model"                       ,transformationPattern="JSONPATH:$.value"]      
+    Type string : Vic_Evc_ProductId                          [ stateTopic="N/02818e05ac4a/evcharger/40/ProductId"                   ,transformationPattern="JSONPATH:$.value"]    
+    Type string : Vic_Evc_FirmwareVersion                    [ stateTopic="N/02818e05ac4a/evcharger/40/FirmwareVersion"             ,transformationPattern="JSONPATH:$.value"]    
+    Type string : Vic_Evc_Serial                             [ stateTopic="N/02818e05ac4a/evcharger/40/Serial"                      ,transformationPattern="JSONPATH:$.value"]    
+    Type string : Vic_Evc_Model                              [ stateTopic="N/02818e05ac4a/evcharger/40/Model"                       ,transformationPattern="JSONPATH:$.value"]      
     Type number : Vic_Evc_MaxCurrent                         [ stateTopic="N/02818e05ac4a/evcharger/40/MaxCurrent"                  ,transformationPattern="JSONPATH:$.value"]        
     Type number : Vic_Evc_Mode                               [ stateTopic="N/02818e05ac4a/evcharger/40/Mode"                        ,transformationPattern="JSONPATH:$.value"]     
     Type number : Vic_Evc_Ac_Energy_Forward                  [ stateTopic="N/02818e05ac4a/evcharger/40/Ac/Energy/Forward"           ,transformationPattern="JSONPATH:$.value"]               
@@ -20,7 +20,7 @@ Thing mqtt:topic:multiplus "multiplus" (mqtt:broker:venus) {
     Type number : Vic_Evc_StartStop                          [ stateTopic="N/02818e05ac4a/evcharger/40/StartStop"                   ,transformationPattern="JSONPATH:$.value"]    
     Type number : Vic_Evc_Position                           [ stateTopic="N/02818e05ac4a/evcharger/40/Position"                    ,transformationPattern="JSONPATH:$.value"]    
 
-    Type number : Vic_Sys_Serial                             [ stateTopic="N/02818e05ac4a/system/0/Serial"                          ,transformationPattern="JSONPATH:$.value"]    
+    Type string : Vic_Sys_Serial                             [ stateTopic="N/02818e05ac4a/system/0/Serial"                          ,transformationPattern="JSONPATH:$.value"]    
     Type number : Vic_Sys_Relay_0_State                      [ stateTopic="N/02818e05ac4a/system/0/Relay/0/State"                   ,transformationPattern="JSONPATH:$.value"]        
     Type number : Vic_Sys_Relay_1_State                      [ stateTopic="N/02818e05ac4a/system/0/Relay/1/State"                   ,transformationPattern="JSONPATH:$.value"]        
     Type number : Vic_Sys_Ac_PvOnOutput_L1_Power             [ stateTopic="N/02818e05ac4a/system/0/Ac/PvOnOutput/L1/Power"          ,transformationPattern="JSONPATH:$.value"]          
