@@ -83,5 +83,13 @@ masonry:
             label: Temp (top)
             title: Heat
             trendItem: TI_PU_O
+        - component: oh-label-card
+          config:
+            action: group
+            actionGroupPopupItem: Victron
+            item: HEAT
+            label: Temp (top)
+            title: Heat
+            trendItem: TI_PU_O
 grid: []
 canvas: []

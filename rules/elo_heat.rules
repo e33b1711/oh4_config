@@ -1,0 +1,40 @@
+import org.eclipse.smarthome.core.library.types.DecimalType
+
+var Number setpoint = 0
+var Number delay_count = 0
+
+rule elo_heat_control
+when
+    Time cron "0/5 * * * * ? *"
+then
+    var P_L1 = (Vic_Sys_Ac_Grid_L1_Power.state as QuantityType<Power>)
+    var P_L2 = (Vic_Sys_Ac_Grid_L2_Power.state as QuantityType<Power>)
+    var P_L3 = (Vic_Sys_Ac_Grid_L3_Power.state as QuantityType<Power>)
+
+    var p_grid = P_L1 + P_L2 + P_L3
+    var p_delta = -800 -p_grid.toBigDecimal 
+    if (p_delta < 0){
+        setpoint = setpoint + p_delta * 220.0 / 3000.0
+    }else{
+        setpoint = setpoint + p_delta * 0.5 * 220.0 / 3000.0
+    }
+    
+    if (setpoint > 220){
+        setpoint = 220
+    }
+    if (setpoint < 0){
+        setpoint = 0
+    }
+    if (setpoint > 30){
+        if (delay_count<20) {
+            delay_count = delay_count + 1
+            setpoint = 30
+        }else{
+            U_EL.sendCommand(setpoint)
+            logInfo("elo_heat_control", "setting: " + setpoint.toString)
+        }
+    }else{
+        delay_count = 0
+    }
+    
+end
