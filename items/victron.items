@@ -5,7 +5,7 @@ String                     Vic_Evc_FirmwareVersion                              
 String                     Vic_Evc_Serial                                          (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Serial"                         , expire="1m, state=UNDEF"}
 String                     Vic_Evc_Model                                           (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Model"                          , expire="1m, state=UNDEF"}
 Number:ElectricCurrent     Vic_Evc_MaxCurrent                                      (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_MaxCurrent"                     , expire="1m, state=UNDEF"}
-Number                     Vic_Evc_Mode                                            (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Mode"                           , expire="1m, state=UNDEF"}
+Number                     Vic_Evc_Mode                                            (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Mode"                           , expire="1m, state=UNDEF", listWidget="oh-stepper-item"[min=0, max=1, step=1], autoupdate="false"}
 Number:Energy              Vic_Evc_Ac_Energy_Forward                               (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_Energy_Forward"              , expire="1m, state=UNDEF"}
 Number:Power               Vic_Evc_Ac_L1_Power                                     (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L1_Power"                    , expire="1m, state=UNDEF"}
 Number:Power               Vic_Evc_Ac_L2_Power                                     (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L2_Power"                    , expire="1m, state=UNDEF"}
@@ -14,8 +14,8 @@ Number:Power               Vic_Evc_Ac_Power                                     
 Number:Time                Vic_Evc_ChargingTime                                    (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_ChargingTime"                   , expire="1m, state=UNDEF"}
 Number:ElectricCurrent     Vic_Evc_Current                                         (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Current"                        , expire="1m, state=UNDEF"}
 Number                     Vic_Evc_Status                                          (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Status"                         , expire="1m, state=UNDEF"}
-Number:ElectricCurrent     Vic_Evc_SetCurrent                                      (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_SetCurrent"                     , expire="1m, state=UNDEF"}
-Number                     Vic_Evc_StartStop                                       (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_StartStop"                      , expire="1m, state=UNDEF"}
+Number:ElectricCurrent     Vic_Evc_SetCurrent                                      (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_SetCurrent"                     , expire="1m, state=UNDEF", listWidget="oh-stepper-item"[min=6, max=32, step=1], autoupdate="false"}
+Number                     Vic_Evc_StartStop                                       (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_StartStop"                      , expire="1m, state=UNDEF", listWidget="oh-stepper-item"[min=0, max=1, step=1], autoupdate="false"}
 Number                     Vic_Evc_Position                                        (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Position"                       , expire="1m, state=UNDEF"}
 
 String                     Vic_Sys_Serial                                          (Victron) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Serial"                         , expire="1m, state=UNDEF"}
