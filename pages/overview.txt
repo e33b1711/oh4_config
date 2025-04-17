@@ -47,49 +47,6 @@ blocks:
                   item: night_timer
                   stateAsHeader: true
                   title: 10 min Timer Nachts
-  - component: oh-block
-    config: {}
-    slots:
-      default:
-        - component: oh-grid-cells
-          config: {}
-          slots:
-            default: []
-masonry:
-  - component: oh-masonry
-    slots:
-      default:
-        - component: oh-label-card
-          config:
-            action: group
-            actionGroupPopupItem: CHARGER
-            item: CHARGER
-            label: Charger Power
-            title: Charger
-            trendItem: charger_power
-        - component: oh-label-card
-          config:
-            action: group
-            actionGroupPopupItem: ESS
-            item: ESS
-            label: State of Charge
-            title: ESS
-            trendItem: state_of_charge
-        - component: oh-label-card
-          config:
-            action: group
-            actionGroupPopupItem: HEAT
-            item: HEAT
-            label: Temp (top)
-            title: Heat
-            trendItem: TI_PU_O
-        - component: oh-label-card
-          config:
-            action: group
-            actionGroupPopupItem: Victron
-            item: HEAT
-            label: Temp (top)
-            title: Heat
-            trendItem: TI_PU_O
+masonry: []
 grid: []
 canvas: []

@@ -1,0 +1,39 @@
+config:
+  label: Energy
+  sidebar: true
+blocks:
+  - component: oh-block
+    config: {}
+    slots:
+      default:
+        - component: oh-grid-cells
+          config: {}
+          slots:
+            default:
+              - component: oh-label-cell
+                config:
+                  action: group
+                  actionGroupPopupItem: Vic_Sys
+                  expandable: false
+                  item: Vic_Sys
+                  stateAsHeader: true
+                  title: Vic_Sys
+              - component: oh-label-cell
+                config:
+                  action: group
+                  actionGroupPopupItem: Vic_Evc
+                  expandable: false
+                  item: Vic_Evc
+                  stateAsHeader: true
+                  title: Vic_Evc
+              - component: oh-label-cell
+                config:
+                  action: group
+                  actionGroupPopupItem: EL_HEAT
+                  expandable: false
+                  item: EL_HEAT
+                  stateAsHeader: true
+                  title: EL_HEAT
+masonry: []
+grid: []
+canvas: []
