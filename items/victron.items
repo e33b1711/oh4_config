@@ -1,5 +1,5 @@
-Group Vic_Sys           "Victron System"                                                   <energy>  (UG_HK)   ["Inverter"]
-Group Vic_Evc           "Victron Charger"                                                  <energy>  (UG_HK)   ["Inverter"]
+Group Vic_Sys           "Victron System"                                                   <energy>       ["Inverter"]
+Group Vic_Evc           "Victron Charger"                                                  <energy>       ["Inverter"]
 
 String                     Vic_Evc_ProductId                                       (Vic_Evc) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_ProductId"                      , expire="1m, state=UNDEF"}
 String                     Vic_Evc_FirmwareVersion                                 (Vic_Evc) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_FirmwareVersion"                , expire="1m, state=UNDEF"}
