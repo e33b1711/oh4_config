@@ -34,12 +34,20 @@ then
         if (delay_count < DELAY) {
             delay_count = delay_count + 1
             setpoint = MIN_SETPOINT
+             logInfo("elo_heat_control", "delaying.")
         }else{
-            U_EL.sendCommand(setpoint)
-            logInfo("elo_heat_control", "setting: " + setpoint.toString)
+            if (ELO_HEAT.state == ON){
+                U_EL.sendCommand(setpoint)
+                logInfo("elo_heat_control", "setting: " + setpoint.toString)
+            }
         }
     }else{
         delay_count = 0
+    }
+
+    if (ELO_HEAT.state == OFF){
+        U_EL.sendCommand(0)
+        logInfo("elo_heat_control", "Off. Sending 0.")
     }
     
 end

@@ -1,0 +1,11 @@
+
+Group EL_HEAT       "Heating"                            <energy>                                             ["Inverter"]
+
+Switch ELO_HEAT                                    (EL_HEAT)
+
+Number U_EL         "E-Heizung"                    (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:U_EL"        , autoupdate="false"                            }
+Number TI_PU_O      "Puffer oben [%.1f °C]"        (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:TI_PU_O"     , autoupdate="false", expire="20m, state=UNDEF" }
+Number TI_PU_U      "TPuffer unten [%.1f °C]"      (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:TI_PU_U"     , autoupdate="false", expire="20m, state=UNDEF" }
+Number F_HE         "Gas Heizung"                  (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:F_HE"        , autoupdate="false"                            }
+Number F_WW         "Pumpensumpf Warnung"          (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:F_WW"        , autoupdate="false", expire="120m, state=UNDEF"}
+Number F_RAIN       "Regen"                        (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:F_RAIN"      , autoupdate="false", expire="120m, state=UNDEF"}
