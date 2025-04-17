@@ -3,6 +3,11 @@ import org.eclipse.smarthome.core.library.types.DecimalType
 var Number setpoint = 0
 var Number delay_count = 0
 
+val int MIN_SETPOINT = 30
+val int MAX_SETPOINT = 220
+val int DELAY = 20
+val float SETPOINT_POWER = 220.0 / 3000.0
+
 rule elo_heat_control
 when
     Time cron "0/5 * * * * ? *"
@@ -14,21 +19,21 @@ then
     var p_grid = P_L1 + P_L2 + P_L3
     var p_delta = -800 -p_grid.toBigDecimal 
     if (p_delta < 0){
-        setpoint = setpoint + p_delta * 220.0 / 3000.0
+        setpoint = setpoint + p_delta * SETPOINT_POWER
     }else{
-        setpoint = setpoint + p_delta * 0.5 * 220.0 / 3000.0
+        setpoint = setpoint + p_delta * 0.5 * SETPOINT_POWER
     }
     
-    if (setpoint > 220){
-        setpoint = 220
+    if (setpoint > MAX_SETPOINT){
+        setpoint = MAX_SETPOINT
     }
     if (setpoint < 0){
         setpoint = 0
     }
-    if (setpoint > 30){
-        if (delay_count<20) {
+    if (setpoint > MIN_SETPOINT){
+        if (delay_count < DELAY) {
             delay_count = delay_count + 1
-            setpoint = 30
+            setpoint = MIN_SETPOINT
         }else{
             U_EL.sendCommand(setpoint)
             logInfo("elo_heat_control", "setting: " + setpoint.toString)
