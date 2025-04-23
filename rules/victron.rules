@@ -6,3 +6,39 @@ then
     actions.publishMQTT("R/02818e05ac4a/system/0/Serial", "")
     logInfo("Solar", "CCGX MQTT Keep Alive Timer fired!!")
 end
+
+
+rule pv_sum_power
+when
+    Item Vic_Sys_Ac_PvOnGrid_L1_Power received update
+then
+    var p_l1 = (Vic_Sys_Ac_PvOnGrid_L1_Power.state as QuantityType<Power>)
+    var p_l2 = (Vic_Sys_Ac_PvOnGrid_L2_Power.state as QuantityType<Power>)
+    var p_l3 = (Vic_Sys_Ac_PvOnGrid_L3_Power.state as QuantityType<Power>)
+    var p_sum = p_l1 + p_l2 + p_l3
+    Vic_Sys_Ac_PvOnGrid_Power.postUpdate(p_sum)
+end
+
+
+rule grid_sum_power
+when
+    Item Vic_Sys_Ac_Grid_L1_Power received update
+then
+    var p_l1 = (Vic_Sys_Ac_Grid_L1_Power.state as QuantityType<Power>)
+    var p_l2 = (Vic_Sys_Ac_Grid_L2_Power.state as QuantityType<Power>)
+    var p_l3 = (Vic_Sys_Ac_Grid_L3_Power.state as QuantityType<Power>)
+    var p_sum = p_l1 + p_l2 + p_l3
+    Vic_Sys_Ac_Grid_Power.postUpdate(p_sum)
+end
+
+
+rule consumption_sum_power
+when
+    Item Vic_Sys_Ac_Consumption_L1_Power received update
+then
+    var p_l1 = (Vic_Sys_Ac_Consumption_L1_Power.state as QuantityType<Power>)
+    var p_l2 = (Vic_Sys_Ac_Consumption_L2_Power.state as QuantityType<Power>)
+    var p_l3 = (Vic_Sys_Ac_Consumption_L3_Power.state as QuantityType<Power>)
+    var p_sum = p_l1 + p_l2 + p_l3
+    Vic_Sys_Ac_Consumption_Power.postUpdate(p_sum)
+end
