@@ -3,15 +3,24 @@ when
     Item LI_OG_BA received update
 then
     sendCommand(SqueezeBadPower, LI_OG_BA.state.toString)
+    if (LI_OG_BA.state==ON){
+        sendCommand(SqueezeBadVolume, 30)
+        sendCommand(SqueezeBadPlayFavorite, "1")
+    }
 end
 
 
 rule audio_wc_rule
 when
-    Item LI_EG_WC received update
+    Item LI_EG_WC received update ON
 then
     sendCommand(SqueezeWCPower, LI_EG_WC.state.toString)
+    if (LI_EG_WC.state==ON){
+        sendCommand(SqueezeWCVolume, 30)
+        sendCommand(SqueezeWCPlayFavorite, "1")
+    }
 end
+
 
 
 rule audio_amp_on
