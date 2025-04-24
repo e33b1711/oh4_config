@@ -12,7 +12,7 @@ end
 
 rule audio_wc_rule
 when
-    Item LI_EG_WC received update ON
+    Item LI_EG_WC received update
 then
     sendCommand(SqueezeWCPower, LI_EG_WC.state.toString)
     if (LI_EG_WC.state==ON){
