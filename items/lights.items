@@ -41,8 +41,8 @@ Switch LI_GR_L1         "Aussen"                 <light>  (Lights, GR)          
 Switch ZE_GR_0          "Timer Innen 10 min"     <light>  (GR)                             ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_0",     autoupdate="false"}
 Switch ZE_GR_1          "Timer Innen 2 min"      <light>  (GR)                             ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_1",     autoupdate="false"}
 Switch ZE_GR_2          "Timer Außen"            <light>  (GR)                             ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:ZE_GR_2",     autoupdate="false"}
-Switch LI_CH 	        "Licht Hühner-Haus"	     <light>  (Lights, CH)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH",       autoupdate="false"}  
-Switch LI_CH_L2         "Licht Hühner-Haus (L2)" <light>  (Lights, CH, ChickenOuterLights) ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L2",    autoupdate="false"}
+Switch LI_CH 	        "Lüftung Hühnerhaus"     <light>  (Lights, CH)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH",       autoupdate="false"}  
+Switch LI_CH_L2         "Licht Hühner-Haus Zaun" <light>  (Lights, CH, ChickenOuterLights) ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L2",    autoupdate="false"}
 Switch LI_CH_L3         "Licht Hühner-Haus (L3)" <light>  (Lights, CH)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L3",    autoupdate="false"}
 Switch LI_CH_L4         "Licht Hühner-Haus (L4)" <light>  (Lights, CH)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L4",    autoupdate="false"}
 Switch BELL             "Klingel"                <siren>  (EG_GA)                          ["Siren"]     { channel="mqtt:topic:mosquitto:arduino_lights:BELL",        autoupdate="false"}
