@@ -1,0 +1,4 @@
+sendCommand(Vic_Evc_Mode, 0)
+sendCommand(Vic_Evc_SetCurrent, 10)
+Thread::sleep(5000)
+sendCommand(Vic_Evc_StartStop, 1)
