@@ -16,8 +16,8 @@ when
 then
     sendCommand(SqueezeWCPower, LI_EG_WC.state.toString)
     if (LI_EG_WC.state==ON){
-        sendCommand(SqueezeWCVolume, 30)
-        sendCommand(SqueezeWCPlayFavorite, "1")
+        sendCommand(SqueezeWCVolume, 20)
+        sendCommand(SqueezeWCPlayFavorite, "3")
     }
 end
 
