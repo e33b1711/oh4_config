@@ -1,4 +1,4 @@
-rule infra_notifiaction
+rule expire_infra_notifiaction
 when
      Member of INFRA changed to "expired"
 then
@@ -6,7 +6,7 @@ then
 end
 
 
-rule infra_notifiaction
+rule expire_infra_notifiaction
 when
      Member of temperature changed to UNDEF
 then
@@ -14,7 +14,7 @@ then
 end
 
 
-rule infra_notifiaction
+rule expire_infra_notifiaction
 when
      Member of humidity changed to UNDEF
 then
@@ -22,7 +22,7 @@ then
 end
 
 
-rule heat_notifiaction
+rule expire_heat_notifiaction
 when
      Member of EL_HEAT changed to UNDEF
 then

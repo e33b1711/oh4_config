@@ -6,7 +6,7 @@ val Map<String, Timer> lightTimersAlways = newHashMap
 
 //timers that are always on
 
-rule light_timer_always
+rule timer_always
 when
      Member of AlwaysTimer changed from OFF to ON
 then
@@ -22,7 +22,7 @@ end
 
 //timers that are only active at night (and can be switched off with item nigt_timers)
 
-rule light_timer
+rule timer_lights
 when
      Member of Lights changed from OFF to ON
 then
@@ -45,7 +45,7 @@ end
 
 //set timer for all lights that are on at 2300
 
-rule light_timer_on
+rule timer_lights_on
 when
    Time cron "0 0 23 * * ?"
 then
@@ -67,7 +67,7 @@ end
 
 //kill all timers if night_timer(s) changed to OFF
 
-rule night_timer_off
+rule timer_night_off
 when
    Item night_timer changed from ON to OFF
 then
@@ -81,7 +81,7 @@ end
 
 //set timer for all lights when night_timer is turned on
 
-rule night_timmer_on
+rule timmer_night_on
 when
    Item night_timer changed from OFF to ON
 then
@@ -102,7 +102,7 @@ then
 end
 
 
-rule sunset_light_on
+rule timer_sunset_on
 when
 	Channel 'astro:sun:local:set#event' triggered START
 then
@@ -112,7 +112,7 @@ then
 end
 
 
-rule sunset_light_off
+rule timer_sunset_off
 when
 	Time cron "0 0 22 * * ?"
 then
@@ -122,7 +122,7 @@ then
 end
 
 
-rule chicken_light_set
+rule timer_cheicken_set
 when
    	Channel 'astro:sun:ChickenOuterLights:set#event' triggered START
 then
@@ -140,7 +140,7 @@ then
 end
 
 
-rule chicken_light_rise
+rule timer_chicken_rise
 when
    Channel 'astro:sun:ChickenOuterLights:rise#event' triggered START
 then

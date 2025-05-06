@@ -3,7 +3,7 @@ import org.openhab.model.script.actions.Timer
 var Timer timer = null 
 
 
-//rule chicken_up
+//rule astro_chicken_up
 //when
 //    Channel 'astro:sun:chicken:rise#event' triggered START
 //then
@@ -12,7 +12,7 @@ var Timer timer = null
 //end
 //
 //
-//rule chicken_down
+//rule astro_chicken_down
 //when
 //    Channel 'astro:sun:chicken:set#event' triggered START
 //then
@@ -21,7 +21,7 @@ var Timer timer = null
 //end
 
 
-rule sunset
+rule astro_sunset
 when
 	Channel 'astro:sun:local:set#event' triggered START
 then
@@ -29,7 +29,7 @@ then
 end
 
 
-rule sunrise
+rule astro_sunrise
 when
 	Channel 'astro:sun:local:rise#event' triggered START
 then
@@ -37,7 +37,7 @@ then
 end
 
 
-rule garage_outer_lights
+rule astro_garage_lights
 when
 	Item ZE_GR_0 received update ON
 then
