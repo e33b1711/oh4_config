@@ -1,25 +1,47 @@
-Group Vic_Sys_          "Victron System (complete)"                                <energy>            ["Inverter"]
-Group Vic_Evc_          "Victron Charger (complete)"                               <energy>            ["Inverter"]
-Group Vic_Sys           "Victron System"                                           <energy>            ["Inverter"]
-Group Vic_Evc           "Victron Charger"                                          <energy>            ["Inverter"]
+Group Vic_Sys_           "Victron System (complete)"                                <energy>            ["Inverter"]
+Group Vic_Leaf_          "Victron Charger Leaf (complete)"                          <energy>            ["Inverter"]
+Group Vic_Passt_         "Victron Charger Passat (complete)"                        <energy>            ["Inverter"]
+Group Vic_Sys            "Victron System"                                           <energy>            ["Inverter"]
+Group Vic_Leaf           "Victron Charger Leaf"                                     <energy>            ["Inverter"]
+Group Vic_Passat         "Victron Charger Passt"                                    <energy>            ["Inverter"]
 
-String                     Vic_Evc_ProductId                                       (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_ProductId"                      , expire="1m, state=UNDEF"}
-String                     Vic_Evc_FirmwareVersion                                 (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_FirmwareVersion"                , expire="1m, state=UNDEF"}
-String                     Vic_Evc_Serial                                          (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Serial"                         , expire="1m, state=UNDEF"}
-String                     Vic_Evc_Model                                           (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Model"                          , expire="1m, state=UNDEF"}
-Number:ElectricCurrent     Vic_Evc_MaxCurrent                                      (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_MaxCurrent"                     , expire="1m, state=UNDEF"}
-Number                     Vic_Evc_Mode                                            (Vic_Evc_, Vic_Evc) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Mode"                           , expire="1m, state=UNDEF", autoupdate="false"}
-Number:Energy              Vic_Evc_Ac_Energy_Forward                               (Vic_Evc_, Vic_Evc) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_Energy_Forward"              , expire="1m, state=UNDEF"}
-Number:Power               Vic_Evc_Ac_L1_Power                                     (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L1_Power"                    , expire="1m, state=UNDEF"}
-Number:Power               Vic_Evc_Ac_L2_Power                                     (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L2_Power"                    , expire="1m, state=UNDEF"}
-Number:Power               Vic_Evc_Ac_L3_Power                                     (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_L3_Power"                    , expire="1m, state=UNDEF"}
-Number:Power               Vic_Evc_Ac_Power                                        (Vic_Evc_, Vic_Evc) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Ac_Power"                       , expire="1m, state=UNDEF"}
-Number:Time                Vic_Evc_ChargingTime                                    (Vic_Evc_, Vic_Evc) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_ChargingTime"                   , expire="1m, state=UNDEF"}
-Number:ElectricCurrent     Vic_Evc_Current                                         (Vic_Evc_, Vic_Evc) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Current"                        , expire="1m, state=UNDEF"}
-Number                     Vic_Evc_Status                                          (Vic_Evc_, Vic_Evc) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Status"                         , expire="1m, state=UNDEF"}
-Number:ElectricCurrent     Vic_Evc_SetCurrent                                      (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_SetCurrent"                     , expire="1m, state=UNDEF", autoupdate="false"}
-Number                     Vic_Evc_StartStop                                       (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_StartStop"                      , expire="1m, state=UNDEF", autoupdate="false"}
-Number                     Vic_Evc_Position                                        (Vic_Evc_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Evc_Position"                       , expire="1m, state=UNDEF"}
+String                     Vic_Leaf_ProductId                                       (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_ProductId"                      , expire="1m, state=UNDEF"}
+String                     Vic_Leaf_FirmwareVersion                                 (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_FirmwareVersion"                , expire="1m, state=UNDEF"}
+String                     Vic_Leaf_Serial                                          (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Serial"                         , expire="1m, state=UNDEF"}
+String                     Vic_Leaf_Model                                           (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Model"                          , expire="1m, state=UNDEF"}
+Number:ElectricCurrent     Vic_Leaf_MaxCurrent                                      (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_MaxCurrent"                     , expire="1m, state=UNDEF"}
+Number                     Vic_Leaf_Mode                                            (Vic_Leaf_, Vic_Leaf) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Mode"                           , expire="1m, state=UNDEF", autoupdate="false"}
+Number:Energy              Vic_Leaf_Ac_Energy_Forward                               (Vic_Leaf_, Vic_Leaf) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Ac_Energy_Forward"              , expire="1m, state=UNDEF"}
+Number:Power               Vic_Leaf_Ac_L1_Power                                     (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Ac_L1_Power"                    , expire="1m, state=UNDEF"}
+Number:Power               Vic_Leaf_Ac_L2_Power                                     (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Ac_L2_Power"                    , expire="1m, state=UNDEF"}
+Number:Power               Vic_Leaf_Ac_L3_Power                                     (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Ac_L3_Power"                    , expire="1m, state=UNDEF"}
+Number:Power               Vic_Leaf_Ac_Power                                        (Vic_Leaf_, Vic_Leaf) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Ac_Power"                       , expire="1m, state=UNDEF"}
+Number:Time                Vic_Leaf_ChargingTime                                    (Vic_Leaf_, Vic_Leaf) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_ChargingTime"                   , expire="1m, state=UNDEF"}
+Number:ElectricCurrent     Vic_Leaf_Current                                         (Vic_Leaf_, Vic_Leaf) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Current"                        , expire="1m, state=UNDEF"}
+Number                     Vic_Leaf_Status                                          (Vic_Leaf_, Vic_Leaf) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Status"                         , expire="1m, state=UNDEF"}
+Number:ElectricCurrent     Vic_Leaf_SetCurrent                                      (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_SetCurrent"                     , expire="1m, state=UNDEF", autoupdate="false"}
+Number                     Vic_Leaf_StartStop                                       (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_StartStop"                      , expire="1m, state=UNDEF", autoupdate="false"}
+Number                     Vic_Leaf_Position                                        (Vic_Leaf_          ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Leaf_Position"                       , expire="1m, state=UNDEF"}
+ 
+
+String                     Vic_Passat_ProductId                                      (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_ProductId"                      , expire="1m, state=UNDEF"}
+String                     Vic_Passat_FirmwareVersion                                (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_FirmwareVersion"                , expire="1m, state=UNDEF"}
+String                     Vic_Passat_Serial                                         (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Serial"                         , expire="1m, state=UNDEF"}
+String                     Vic_Passat_Model                                          (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Model"                          , expire="1m, state=UNDEF"}
+Number:ElectricCurrent     Vic_Passat_MaxCurrent                                     (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_MaxCurrent"                     , expire="1m, state=UNDEF"}
+Number                     Vic_Passat_Mode                                           (Vic_Passat_, Vic_Passat) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Mode"                           , expire="1m, state=UNDEF", autoupdate="false"}
+Number:Energy              Vic_Passat_Ac_Energy_Forward                              (Vic_Passat_, Vic_Passat) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Ac_Energy_Forward"              , expire="1m, state=UNDEF"}
+Number:Power               Vic_Passat_Ac_L1_Power                                    (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Ac_L1_Power"                    , expire="1m, state=UNDEF"}
+Number:Power               Vic_Passat_Ac_L2_Power                                    (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Ac_L2_Power"                    , expire="1m, state=UNDEF"}
+Number:Power               Vic_Passat_Ac_L3_Power                                    (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Ac_L3_Power"                    , expire="1m, state=UNDEF"}
+Number:Power               Vic_Passat_Ac_Power                                       (Vic_Passat_, Vic_Passat) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Ac_Power"                       , expire="1m, state=UNDEF"}
+Number:Time                Vic_Passat_ChargingTime                                   (Vic_Passat_, Vic_Passat) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_ChargingTime"                   , expire="1m, state=UNDEF"}
+Number:ElectricCurrent     Vic_Passat_Current                                        (Vic_Passat_, Vic_Passat) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Current"                        , expire="1m, state=UNDEF"}
+Number                     Vic_Passat_Status                                         (Vic_Passat_, Vic_Passat) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Status"                         , expire="1m, state=UNDEF"}
+Number:ElectricCurrent     Vic_Passat_SetCurrent                                     (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_SetCurrent"                     , expire="1m, state=UNDEF", autoupdate="false"}
+Number                     Vic_Passat_StartStop                                      (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_StartStop"                      , expire="1m, state=UNDEF", autoupdate="false"}
+Number                     Vic_Passat_Position                                       (Vic_Passat_            ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Passat_Position"                       , expire="1m, state=UNDEF"}
+
 
 String                     Vic_Sys_Serial                                          (Vic_Sys_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Serial"                         , expire="1m, state=UNDEF"}
 Number                     Vic_Sys_Relay_0_State                                   (Vic_Sys_         ) ["Energy"]   { channel="mqtt:topic:multiplus:Vic_Sys_Relay_0_State"                  , expire="1m, state=UNDEF"}

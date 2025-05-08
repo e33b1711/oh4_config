@@ -1,0 +1,130 @@
+// victron ev charger states
+// 0 - disconnected, 
+// 1 - connected, 
+// 2 - charging, 
+// 3 - charged, 
+// 4 - waiting for sun, 
+// 5 - waiting for RFID, 
+// 6 - waiting for start, 
+// 7 - low SOC,
+// 8 - ground test error, 
+// 9 - welded contacts test error,
+// 10 - CP input test error (shorted)
+// 11 - Residual current detected
+// 12 - Undervoltage detected
+// 13 - Overvoltage detected
+// 14 - Overheating detected
+// 15 - Reserved
+// 16 - Reserved
+// 17 - Reserved
+// 18 - Reserved
+// 19 - Reserved
+// 20 - Charging limit
+// 21 - start charging
+// 22 - switching to 3 phase
+// 23 - switching to 1 phase
+// 24 - stop charging"
+
+
+rule passat_shedule
+when
+    Time cron "0 0 20 * * ? *"
+then
+    postUpdate(passat_force_charge_energy, 20)
+    postUpdate(passat_force_charge, ON)
+end
+
+
+rule passat_status
+when
+    Item Vic_Passat_Status changed
+then
+    
+    //get some items as vars
+    var evc_status = Vic_Passat_Status.state as Number
+
+    //on disconnect
+    if (evc_status == 0){
+        logInfo("Passat", "disconnected. Setting auto mode. Setting Force charge off.")
+        sendCommand(Vic_Passat_Mode, 1)
+        postUpdate(passat_force_charge, OFF)
+    }
+    
+    //on connect
+    if (evc_status == 1){
+        logInfo("Passat", "connected.")
+    }
+
+    //on charged
+    if (evc_status == 3){
+        logInfo("Passat", "charged.")
+        sendCommand(Vic_Passat_StartStop, 0)
+        sendNotification("e33b1711@gmail.com", "Passat charged. Stopping.")
+        postUpdate(passat_force_charge, OFF)
+    }
+    
+    //on error status
+    if ((evc_status >= 8) && (evc_status <= 14)){
+        logWarning("Passat", "Error State: %i.", (Vic_Passat_Mode.state as Number))
+        sendNotification("e33b1711@gmail.com", "Passat Wallbox error state")
+        postUpdate(passat_force_charge, OFF)
+    }
+
+end
+    
+
+rule passat_force_charge
+when
+    Time cron "0 0/1 * * * ? *"
+then
+    
+    //get some items as vars
+    var evc_status = Vic_Passat_Status.state as Number
+    var evc_mode = Vic_Passat_Mode.state as Number
+    var evc_energy = Vic_Passat_Ac_Energy_Forward.state as Number
+    var target_energy = passat_force_charge_energy.state as Number
+    var current = Vic_Passat_SetCurrent.state
+
+    logDebug("Passat", "evc_status {}", evc_status)
+    logDebug("Passat", "evc_mode {}", evc_mode)
+    logDebug("Passat", "evc_energy {}", evc_energy)
+    logDebug("Passat", "target_energy {}", target_energy)
+    logDebug("Passat", "current {}", current)
+    
+    //force charging?
+    if (passat_force_charge.state == OFF){
+        return
+    }
+
+    //connected?
+    if (evc_status == 0){
+        return
+    }
+
+    //already charged
+    if (evc_status == 3){
+        return
+    }
+   
+    //energy goal reached? => ensure automode
+    if (evc_energy >= target_energy){
+        logInfo("Passat", "Target energy reached. Setting auto mode.")
+        postUpdate(passat_force_charge, OFF)
+        if (evc_mode == 0){
+            sendCommand(Vic_Passat_Mode, 1)
+        }
+    }else{
+        if (!((evc_status == 2) && (current == 10|A) && (evc_mode == 0))){
+            logInfo("Passat", "Setting manual mode 10A.")
+            sendCommand(Vic_Passat_Mode, 0)
+            sendCommand(Vic_Passat_SetCurrent, 10)
+            Thread::sleep(5000)
+            sendCommand(Vic_Passat_StartStop, 1)
+        }
+    }
+    
+    //log status
+    Thread::sleep(5000)
+    logDebug("Passat", "Done. State is {}", Vic_Passat_Status.state)
+
+end

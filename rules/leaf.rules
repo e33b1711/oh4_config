@@ -47,16 +47,16 @@ end
 
 rule leaf_status
 when
-    Item Vic_Evc_Status changed
+    Item Vic_Leaf_Status changed
 then
     
     //get some items as vars
-    var evc_status = Vic_Evc_Status.state as Number
+    var evc_status = Vic_Leaf_Status.state as Number
 
     //on disconnect
     if (evc_status == 0){
         logInfo("Leaf", "disconnected. Setting auto mode. Setting Force charge off.")
-        sendCommand(Vic_Evc_Mode, 1)
+        sendCommand(Vic_Leaf_Mode, 1)
         postUpdate(leaf_force_charge, OFF)
     }
     
@@ -68,14 +68,14 @@ then
     //on charged
     if (evc_status == 3){
         logInfo("Leaf", "charged.")
-        sendCommand(Vic_Evc_StartStop, 0)
+        sendCommand(Vic_Leaf_StartStop, 0)
         sendNotification("e33b1711@gmail.com", "Leaf charged. Stopping.")
         postUpdate(leaf_force_charge, OFF)
     }
     
     //on error status
     if ((evc_status >= 8) && (evc_status <= 14)){
-        logWarning("Leaf", "Error State: %i.", (Vic_Evc_Mode.state as Number))
+        logWarning("Leaf", "Error State: %i.", (Vic_Leaf_Mode.state as Number))
         sendNotification("e33b1711@gmail.com", "Leaf Wallbox error state")
         postUpdate(leaf_force_charge, OFF)
     }
@@ -89,11 +89,11 @@ when
 then
     
     //get some items as vars
-    var evc_status = Vic_Evc_Status.state as Number
-    var evc_mode = Vic_Evc_Mode.state as Number
-    var evc_energy = Vic_Evc_Ac_Energy_Forward.state as Number
+    var evc_status = Vic_Leaf_Status.state as Number
+    var evc_mode = Vic_Leaf_Mode.state as Number
+    var evc_energy = Vic_Leaf_Ac_Energy_Forward.state as Number
     var target_energy = leaf_force_charge_energy.state as Number
-    var current = Vic_Evc_SetCurrent.state
+    var current = Vic_Leaf_SetCurrent.state
 
     logDebug("Leaf", "evc_status {}", evc_status)
     logDebug("Leaf", "evc_mode {}", evc_mode)
@@ -121,20 +121,20 @@ then
         logInfo("Leaf", "Target energy reached. Setting auto mode.")
         postUpdate(leaf_force_charge, OFF)
         if (evc_mode == 0){
-            sendCommand(Vic_Evc_Mode, 1)
+            sendCommand(Vic_Leaf_Mode, 1)
         }
     }else{
         if (!((evc_status == 2) && (current == 10|A) && (evc_mode == 0))){
             logInfo("Leaf", "Setting manual mode 10A.")
-            sendCommand(Vic_Evc_Mode, 0)
-            sendCommand(Vic_Evc_SetCurrent, 10)
+            sendCommand(Vic_Leaf_Mode, 0)
+            sendCommand(Vic_Leaf_SetCurrent, 10)
             Thread::sleep(5000)
-            sendCommand(Vic_Evc_StartStop, 1)
+            sendCommand(Vic_Leaf_StartStop, 1)
         }
     }
     
     //log status
     Thread::sleep(5000)
-    logDebug("Leaf", "Done. State is {}", Vic_Evc_Status.state)
+    logDebug("Leaf", "Done. State is {}", Vic_Leaf_Status.state)
 
 end
