@@ -26,7 +26,7 @@
 // 24 - stop charging"
 
 
-rule leaf_anselm
+rule leaf_schedule_anselm
 when
     Time cron "0 0 20 ? * SUN *" or
     Time cron "0 0 20 ? * TUE *"
@@ -36,12 +36,24 @@ then
 end
 
 
-rule leaf_melli
+rule leaf_schedule_melli
 when
     Time cron "0 0 20 ? * WED *" 
 then
     postUpdate(leaf_force_charge_energy, 10)
     postUpdate(leaf_force_charge, ON)
+end
+
+
+rule leaf_schedule_off
+when
+    Time cron "0 0 6 * * ? *"
+then
+    if (leaf_force_charge.state == OFF){
+        return
+    }
+    postUpdate(leaf_force_charge, OFF)
+    sendCommand(Vic_Leaf_Mode, 1)
 end
 
 

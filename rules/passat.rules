@@ -35,6 +35,18 @@ then
 end
 
 
+rule passat_schedule_off
+when
+    Time cron "0 0 6 * * ? *"
+then
+    if (passat_force_charge.state == OFF){
+        return
+    }
+    postUpdate(passat_force_charge, OFF)
+    sendCommand(Vic_Passat_Mode, 1)
+end
+
+
 rule passat_status
 when
     Item Vic_Passat_Status changed
