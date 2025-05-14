@@ -28,16 +28,16 @@
 
 rule passat_shedule
 when
-    Time cron "0 0 20 * * ? *"
+    Time cron "0 0 8 * * ? *"  or
+    Time cron "0 0 20 ? * MON *"
 then
-    postUpdate(passat_force_charge_energy, 20)
     postUpdate(passat_force_charge, ON)
 end
 
 
 rule passat_schedule_off
 when
-    Time cron "0 0 6 * * ? *"
+    Time cron "0 0 12 * * ? *"
 then
     if (passat_force_charge.state == OFF){
         return
@@ -94,13 +94,11 @@ then
     var evc_status = Vic_Passat_Status.state as Number
     var evc_mode = Vic_Passat_Mode.state as Number
     var evc_energy = Vic_Passat_Ac_Energy_Forward.state as Number
-    var target_energy = passat_force_charge_energy.state as Number
     var current = Vic_Passat_SetCurrent.state
 
     logDebug("Passat", "evc_status {}", evc_status)
     logDebug("Passat", "evc_mode {}", evc_mode)
     logDebug("Passat", "evc_energy {}", evc_energy)
-    logDebug("Passat", "target_energy {}", target_energy)
     logDebug("Passat", "current {}", current)
     
     //force charging?
@@ -118,21 +116,13 @@ then
         return
     }
    
-    //energy goal reached? => ensure automode
-    if (evc_energy >= target_energy){
-        logInfo("Passat", "Target energy reached. Setting auto mode.")
-        postUpdate(passat_force_charge, OFF)
-        if (evc_mode == 0){
-            sendCommand(Vic_Passat_Mode, 1)
-        }
-    }else{
-        if (!((evc_status == 2) && (current == 10|A) && (evc_mode == 0))){
-            logInfo("Passat", "Setting manual mode 10A.")
-            sendCommand(Vic_Passat_Mode, 0)
-            sendCommand(Vic_Passat_SetCurrent, 10)
-            Thread::sleep(5000)
-            sendCommand(Vic_Passat_StartStop, 1)
-        }
+    //ensure charging in manual mode
+    if (!((evc_status == 2) && (current == 32|A) && (evc_mode == 0))){
+        logInfo("Leaf", "Setting manual mode 32A.")
+        sendCommand(Vic_Leaf_Mode, 0)
+        sendCommand(Vic_Leaf_SetCurrent, 32)
+        Thread::sleep(5000)
+        sendCommand(Vic_Leaf_StartStop, 1)
     }
     
     //log status

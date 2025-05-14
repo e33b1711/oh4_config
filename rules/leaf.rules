@@ -26,21 +26,11 @@
 // 24 - stop charging"
 
 
-rule leaf_schedule_anselm
+rule leaf_schedule
 when
     Time cron "0 0 20 ? * SUN *" or
     Time cron "0 0 20 ? * TUE *"
 then
-    postUpdate(leaf_force_charge_energy, 20)
-    postUpdate(leaf_force_charge, ON)
-end
-
-
-rule leaf_schedule_melli
-when
-    Time cron "0 0 20 ? * WED *" 
-then
-    postUpdate(leaf_force_charge_energy, 10)
     postUpdate(leaf_force_charge, ON)
 end
 
@@ -104,13 +94,11 @@ then
     var evc_status = Vic_Leaf_Status.state as Number
     var evc_mode = Vic_Leaf_Mode.state as Number
     var evc_energy = Vic_Leaf_Ac_Energy_Forward.state as Number
-    var target_energy = leaf_force_charge_energy.state as Number
     var current = Vic_Leaf_SetCurrent.state
 
     logDebug("Leaf", "evc_status {}", evc_status)
     logDebug("Leaf", "evc_mode {}", evc_mode)
     logDebug("Leaf", "evc_energy {}", evc_energy)
-    logDebug("Leaf", "target_energy {}", target_energy)
     logDebug("Leaf", "current {}", current)
     
     //force charging?
@@ -128,23 +116,15 @@ then
         return
     }
    
-    //energy goal reached? => ensure automode
-    if (evc_energy >= target_energy){
-        logInfo("Leaf", "Target energy reached. Setting auto mode.")
-        postUpdate(leaf_force_charge, OFF)
-        if (evc_mode == 0){
-            sendCommand(Vic_Leaf_Mode, 1)
-        }
-    }else{
-        if (!((evc_status == 2) && (current == 10|A) && (evc_mode == 0))){
-            logInfo("Leaf", "Setting manual mode 10A.")
-            sendCommand(Vic_Leaf_Mode, 0)
-            sendCommand(Vic_Leaf_SetCurrent, 10)
-            Thread::sleep(5000)
-            sendCommand(Vic_Leaf_StartStop, 1)
-        }
+    //ensure charging in manual mode
+    if (!((evc_status == 2) && (current == 10|A) && (evc_mode == 0))){
+        logInfo("Leaf", "Setting manual mode 10A.")
+        sendCommand(Vic_Leaf_Mode, 0)
+        sendCommand(Vic_Leaf_SetCurrent, 10)
+        Thread::sleep(5000)
+        sendCommand(Vic_Leaf_StartStop, 1)
     }
-    
+
     //log status
     Thread::sleep(5000)
     logDebug("Leaf", "Done. State is {}", Vic_Leaf_Status.state)
