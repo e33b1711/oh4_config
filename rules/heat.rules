@@ -27,3 +27,16 @@ then
         item.sendCommand(backup_value)
     ]
 end
+
+
+// re-command the value in case the controller forgets because of a reboot
+rule heat_control_enforce
+when
+    Time cron "0 0/10 * * * ? *"
+then
+    if (heat_control.state==OFF){
+        target_temp.members.forEach [ item |
+            item.sendCommand(-10)
+        ]
+    }
+end
