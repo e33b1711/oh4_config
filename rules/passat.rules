@@ -118,11 +118,11 @@ then
    
     //ensure charging in manual mode
     if (!((evc_status == 2) && (current == 32|A) && (evc_mode == 0))){
-        logInfo("Leaf", "Setting manual mode 32A.")
-        sendCommand(Vic_Leaf_Mode, 0)
-        sendCommand(Vic_Leaf_SetCurrent, 32)
+        logInfo("Passat", "Setting manual mode 32A.")
+        sendCommand(Vic_Passat_Mode, 0)
+        sendCommand(Vic_Passat_SetCurrent, 32)
         Thread::sleep(5000)
-        sendCommand(Vic_Leaf_StartStop, 1)
+        sendCommand(Vic_Passat_StartStop, 1)
     }
     
     //log status
