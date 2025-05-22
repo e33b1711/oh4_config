@@ -1,13 +1,11 @@
 rule rain
 when
-	Item F_RAIN received update ON
+	Item F_RAIN received update ON or
+	Item F_RAIN received update 1
 then
 	sendNotification("e33b1711@gmail.com", "Its raining.")
 	sendCommand(DF_OG_KN, 100)
 	sendCommand(DF_OG_KS, 100)
 	sendCommand(DF_OG_SZ, 100)
 	sendCommand(DF_OG_GA, 100)
-	sendCommand(RO_OG_KN, 100)
-	sendCommand(RO_OG_KS, 100)
-	sendCommand(RO_EG_WE, 100)
 end
