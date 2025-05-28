@@ -8,5 +8,4 @@ Number TI_PU_O      "Puffer oben [%.1f °C]"        (EL_HEAT)      ["Energy"]   
 Number TI_PU_U      "TPuffer unten [%.1f °C]"      (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:TI_PU_U"     , autoupdate="false", expire="20m, state=UNDEF" }
 Number F_HE         "Gas Heizung"                  (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:F_HE"        , autoupdate="false"                            }
 Number F_WW         "Pumpensumpf Warnung"          (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:F_WW"        , autoupdate="false", expire="120m, state=UNDEF"}
-Number F_RAIN       "Regen-Sensor"                 (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:F_RAIN"      , autoupdate="false", expire="120m, state=UNDEF"}
-Number RAIN         "Regen"                        (EL_HEAT)      ["Energy"]      { expire="30m, state=0"}
+Number F_RAIN       "Regen"                        (EL_HEAT)      ["Energy"]      { channel="mqtt:topic:mosquitto:arduino_climate:F_RAIN"      , autoupdate="false", expire="120m, state=UNDEF"}

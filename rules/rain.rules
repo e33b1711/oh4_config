@@ -1,14 +1,7 @@
-rule rain_hist
+rule rain
 when
 	Item F_RAIN received update ON or
 	Item F_RAIN received update 1
-then
-	RAIN.postUpdate(1)
-end
-
-rule rain
-when
-	Item RAIN received update 1
 then
 	sendNotification("e33b1711@gmail.com", "Its raining.")
 	sendCommand(DF_OG_KN, 100)
