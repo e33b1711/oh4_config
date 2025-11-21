@@ -7,6 +7,7 @@ String  revision_eg_ost          "Revision EG Ost [%S]"         (INFRA) { channe
 String  revision_ug              "Revision UG [%S]"             (INFRA) { channel="mqtt:topic:mosquitto:infra:revision_ug",             autoupdate="false", expire="10m, state=expired" } 
 String  revision_power           "Revision Power [%S]"          (INFRA) { channel="mqtt:topic:mosquitto:infra:revision_power",          autoupdate="false", expire="10m, state=expired" } 
 String  revision_ch              "Revision Chicken [%S]"        (INFRA) { channel="mqtt:topic:mosquitto:infra:revision_ch",             autoupdate="false", expire="10m, state=expired" } 
+String  revision_ch              "Revision Sauna [%S]"          (INFRA) { channel="mqtt:topic:mosquitto:infra:revision_sa",             autoupdate="false", expire="10m, state=expired" } 
 String  revision_garage          "Revision Garage [%S]"         (INFRA) { channel="mqtt:topic:mosquitto:infra:revision_garage",         autoupdate="false", expire="10m, state=expired" } 
 String  revision_relay_service   "Revision Relay Service [%S]"  (INFRA) { channel="mqtt:topic:mosquitto:infra:revision_relay_service",  autoupdate="false", expire="10m, state=expired" } 
 String  revision_bridge_service  "Revision Bridge Service [%S]" (INFRA) { channel="mqtt:topic:mosquitto:infra:revision_bridge_service", autoupdate="false", expire="10m, state=expired" } 

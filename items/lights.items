@@ -46,6 +46,11 @@ Switch LI_CH_L2         "Licht Hühner-Haus Zaun" <light>  (Lights, CH, ChickenO
 Switch LI_CH_L3         "Licht Hühner-Haus (L3)" <light>  (Lights, CH)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L3",    autoupdate="false"}
 Switch LI_CH_L4         "Licht Hühner-Haus (L4)" <light>  (Lights, CH)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_CH_L4",    autoupdate="false"}
 Switch BELL             "Klingel"                <siren>  (EG_GA)                          ["Siren"]     { channel="mqtt:topic:mosquitto:arduino_lights:BELL",        autoupdate="false"}
+Switch LI_SA_L1         "Licht Sauna"            <light>  (Lights, SA)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_SA_L1",    autoupdate="false"}
+Switch LI_SA_L2         "Licht Sauna 1"          <light>  (Lights, SA)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_SA_L2",    autoupdate="false"}
+Switch LI_SA_L3         "Licht Sauna 2"          <light>  (Lights, SA)                     ["Lightbulb"] { channel="mqtt:topic:mosquitto:arduino_lights:LI_SA_L3",    autoupdate="false"}
+
+
 
 Group PumpTimer
 Switch PUMP             "Zisternenpumpe"         <pump>   (AU, PumpTimer)                  ["Pump"]      { channel="mqtt:topic:mosquitto:arduino_lights:PUMP",        autoupdate="false"}

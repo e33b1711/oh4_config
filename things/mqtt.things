@@ -47,6 +47,11 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
         Type switch : LI_CH_L4      "LI_CH_L4"       [ stateTopic="ard_state/LI_CH_L4"     ,commandTopic="ard_command/LI_CH_L4"     , on="1", off="0"  ]
         Type switch : BELL          "BELL"           [ stateTopic="ard_state/BELL"         ,commandTopic="ard_command/BELL"         , on="1", off="0"  ]
         Type switch : PUMP          "PUMP"           [ stateTopic="ard_state/PUMP"         ,commandTopic="ard_command/PUMP"         , on="1", off="0"  ]
+        Type switch : LI_SA_L1      "LI_SA_L1"       [ stateTopic="ard_state/LI_SA_L1"     ,commandTopic="ard_command/LI_SA_L1"     , on="1", off="0"  ]
+        Type switch : LI_SA_L2      "LI_SA_L2"       [ stateTopic="ard_state/LI_SA_L2"     ,commandTopic="ard_command/LI_SA_L2"     , on="1", off="0"  ]
+        Type switch : LI_SA_L3      "LI_SA_L3"       [ stateTopic="ard_state/LI_SA_L3"     ,commandTopic="ard_command/LI_SA_L3"     , on="1", off="0"  ]
+       
+    
     }   
     
     Thing topic arduino_climate "Arduino Climate" @ "debug" {
@@ -74,7 +79,11 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
         Type number: TI_UG_LA       "TI_UG_LA" [ stateTopic="ard_state/TI_UG_LA" ]         
         Type number: TI_GR          "TI_GR"    [ stateTopic="ard_state/TI_GR"    ]         
         Type number: TI_AU          "TI_AU"    [ stateTopic="ard_state/TI_AU"    ]         
-        Type number: TI_CH 	        "TI_CH"    [ stateTopic="ard_state/TI_CH"    ]          
+        Type number: TI_CH 	        "TI_CH"    [ stateTopic="ard_state/TI_CH"    ]    
+        Type number: TI_SA 	        "TI_SA"    [ stateTopic="ard_state/TI_SA"    ]
+        Type number: TI_SA1 	    "TI_SA1"   [ stateTopic="ard_state/TI_SA1"   ]
+        Type number: TI_SA2	        "TI_SA2"   [ stateTopic="ard_state/TI_SA2"   ]
+        Type number: TI_SA3 	    "TI_SA3"   [ stateTopic="ard_state/TI_SA3"   ]      
         Type number: HI_EG_WZ       "HI_EG_WZ" [ stateTopic="ard_state/HI_EG_WZ" ]         
         Type number: HI_EG_KU       "HI_EG_KU" [ stateTopic="ard_state/HI_EG_KU" ]         
         Type number: HI_EG_EZ       "HI_EG_EZ" [ stateTopic="ard_state/HI_EG_EZ" ]         
@@ -107,6 +116,7 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
         Type number: V_OG_GA        "V_OG_GA"  [ stateTopic="ard_state/V_OG_GA"  ]         
         Type number: V_OG_BA        "V_OG_BA"  [ stateTopic="ard_state/V_OG_BA"  ]         
         Type number: V_OG_SZ        "V_OG_SZ"  [ stateTopic="ard_state/V_OG_SZ"  ] 
+        Type number: V_SA           "V_SA"     [ stateTopic="ard_state/V_SA"     ] 
         Type number: TS_UG_HO       "TS_UG_HO" [ stateTopic="ard_state/TS_UG_HO" ,    commandTopic="ard_command/TS_UG_HO"    ]         
         Type number: TS_UG_LA       "TS_UG_LA" [ stateTopic="ard_state/TS_UG_LA" ,    commandTopic="ard_command/TS_UG_LA"    ]         
         Type number: TS_UG_GA       "TS_UG_GA" [ stateTopic="ard_state/TS_UG_GA" ,    commandTopic="ard_command/TS_UG_GA"    ]         
@@ -121,7 +131,8 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
         Type number: TS_OG_KN       "TS_OG_KN" [ stateTopic="ard_state/TS_OG_KN" ,    commandTopic="ard_command/TS_OG_KN"    ]         
         Type number: TS_OG_GA       "TS_OG_GA" [ stateTopic="ard_state/TS_OG_GA" ,    commandTopic="ard_command/TS_OG_GA"    ]         
         Type number: TS_OG_BA       "TS_OG_BA" [ stateTopic="ard_state/TS_OG_BA" ,    commandTopic="ard_command/TS_OG_BA"    ]         
-        Type number: TS_OG_SZ       "TS_OG_SZ" [ stateTopic="ard_state/TS_OG_SZ" ,    commandTopic="ard_command/TS_OG_SZ"    ]       
+        Type number: TS_OG_SZ       "TS_OG_SZ" [ stateTopic="ard_state/TS_OG_SZ" ,    commandTopic="ard_command/TS_OG_SZ"    ]    
+        Type number: TS_SA          "TS_OG_SZ" [ stateTopic="ard_state/TS_SA"    ,    commandTopic="ard_command/TS_SA"       ]     
     }   
     
     Thing topic arduino_rollershutter "Arduino Rollershutter" @ "debug" {
@@ -153,6 +164,7 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
         Type string: revision_ug     	     "revision_ug"              [ stateTopic="ard_state/ug"               ]  
         Type string: revision_power  	     "revision_power"           [ stateTopic="ard_state/power"            ]   
         Type string: revision_ch     	     "revision_ch"              [ stateTopic="ard_state/ch"               ] 
+        Type string: revision_sa     	     "revision_sa"              [ stateTopic="ard_state/sa"               ] 
         Type string: revision_garage 	     "revision_garage"          [ stateTopic="ard_state/gr"               ]      
         Type string: revision_relay_service  "revision_relay_service"   [ stateTopic="ard_state/relay_service"    ] 
         Type string: revision_bridge_service "revision_bridge_service"  [ stateTopic="ard_state/bridge_service"   ]         
