@@ -28,6 +28,7 @@ Number TI_SA        "Temperatur Sauna [%.1f °C]"            <temperature>      
 Number TI_SA1       "Temperatur Sauna1 [%.1f °C]"           <temperature>       (temperature, SA)                ["Temperature", "Measurement"] { channel="mqtt:topic:mosquitto:arduino_climate:TI_SA1"       , autoupdate="false", expire="20m, state=UNDEF"}
 Number TI_SA2       "Temperatur Sauna2 [%.1f °C]"           <temperature>       (temperature, SA)                ["Temperature", "Measurement"] { channel="mqtt:topic:mosquitto:arduino_climate:TI_SA2"       , autoupdate="false", expire="20m, state=UNDEF"}
 Number TI_SA3       "Temperatur Sauna3 [%.1f °C]"           <temperature>       (temperature, SA)                ["Temperature", "Measurement"] { channel="mqtt:topic:mosquitto:arduino_climate:TI_SA3"       , autoupdate="false", expire="20m, state=UNDEF"}
+Number TI_SA34      "Temperatur Sauna4 [%.1f °C]"           <temperature>       (temperature, SA)                ["Temperature", "Measurement"] { channel="mqtt:topic:mosquitto:arduino_climate:TI_SA4"       , autoupdate="false", expire="20m, state=UNDEF"}
 
 
 

@@ -84,6 +84,7 @@ Bridge mqtt:broker:mosquitto "Mosquitto Bridge" [ host="127.0.0.1", port=1883, s
         Type number: TI_SA1 	    "TI_SA1"   [ stateTopic="ard_state/TI_SA1"   ]
         Type number: TI_SA2	        "TI_SA2"   [ stateTopic="ard_state/TI_SA2"   ]
         Type number: TI_SA3 	    "TI_SA3"   [ stateTopic="ard_state/TI_SA3"   ]      
+        Type number: TI_SA4 	    "TI_SA4"   [ stateTopic="ard_state/TI_SA4"   ]      
         Type number: HI_EG_WZ       "HI_EG_WZ" [ stateTopic="ard_state/HI_EG_WZ" ]         
         Type number: HI_EG_KU       "HI_EG_KU" [ stateTopic="ard_state/HI_EG_KU" ]         
         Type number: HI_EG_EZ       "HI_EG_EZ" [ stateTopic="ard_state/HI_EG_EZ" ]         
