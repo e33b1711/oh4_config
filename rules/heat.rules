@@ -40,3 +40,19 @@ then
         ]
     }
 end
+
+
+rule sauna_off
+when
+    Item sauna_control received update OFF
+then
+    TS_SA.sendCommand(-10)
+end
+
+
+rule sauna_on
+when
+    Item sauna_control received update ON
+then
+    TS_SA.sendCommand(65)
+end
