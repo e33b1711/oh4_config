@@ -50,6 +50,8 @@ Number HI_UG_LA     "Feuchte Lager [%.1f %%]"               <water>             
 Number HI_GR        "Feuchte Garage [%.1f %%]"              <water>             (humidity, GR)                   ["Humidity", "Measurement"]    { channel="mqtt:topic:mosquitto:arduino_climate:HI_GR"       , autoupdate="false", expire="20m, state=UNDEF"}
 Number HI_AU        "Feuchte Aussen [%.1f %%]"              <water>             (humidity, AU)                   ["Humidity", "Measurement"]    { channel="mqtt:topic:mosquitto:arduino_climate:HI_AU"       , autoupdate="false", expire="20m, state=UNDEF"}
 Number HI_CH        "Feuchte Hühner-Haus [%.1f %%]"         <water>             (humidity, CH)                   ["Humidity", "Measurement"]    { channel="mqtt:topic:mosquitto:arduino_climate:HI_CH"       , autoupdate="false", expire="20m, state=UNDEF"}
+Number HI_SA        "Feuchte Sauna [%.1f %%]"               <water>             (humidity, SA)                   ["Humidity", "Measurement"]    { channel="mqtt:topic:mosquitto:arduino_climate:HI_SA"       , autoupdate="false", expire="20m, state=UNDEF"}
+
 
 Number V_UG_HO      "Heiz-Ventil Hobby [%.1f]"            <heating>           (temperature, UG_HO)           { channel="mqtt:topic:mosquitto:arduino_climate:V_UG_HO", autoupdate="false"}
 Number V_UG_LA      "Heiz-Ventil Lager [%.1f]"            <heating>           (temperature, UG_LA)           { channel="mqtt:topic:mosquitto:arduino_climate:V_UG_LA", autoupdate="false"}
